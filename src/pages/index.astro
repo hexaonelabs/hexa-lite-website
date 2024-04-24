@@ -1,0 +1,380 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+
+import Button from '~/components/ui/Button.astro';
+import Image from '~/components/common/Image.astro';
+
+import { headerData } from '~/navigation';
+import Hero3 from '~/components/widgets/Hero3.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import PartnersList from '~/components/widgets/Partners.astro';
+
+const appStoreImg = '~/assets/images/app-store.png';
+const appStoreDownloadLink = 'https://github.com/onwidget/astrowind';
+
+const appPreview = '~/assets/images/preview-app.png';
+const appDownloadLink = '#';
+
+const onBoardingImg = '~/assets/images/onboarding.png';
+const defiImg = '~/assets/images/coins-b.png';
+const githubImg = '~/assets/images/github.svg';
+
+const googlePlayImg = '~/assets/images/google-play.png';
+const googlePlayDownloadLink = 'https://github.com/onwidget/astrowind';
+
+const metadata = {
+  title: 'Mobile App Homepage',
+};
+---
+
+<Layout metadata={metadata}>
+  <Fragment slot="announcement"></Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero3
+    image={{
+      src: appPreview,
+      alt: 'Hexa Lite preview App',
+      class: 'app__preview',
+    }}
+    actions={[
+      {
+        text: 'Download now',
+        href: appDownloadLink,
+        variant: 'primary',
+      },
+      {
+        text: 'Learn more',
+        href: '#onboard__shader_section',
+      }]}
+  >
+    <Fragment slot="title">
+      <span class="text-accent dark:text-white highlight">Build your Wealth</span>
+      <br />
+      with Crypto Assets
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Start inversting now with a simple App that allow you to buy Crypto and earn interest.
+      </span>
+      Take full control of your digital assets and explore the world of decentralized finance.
+    </Fragment>
+
+    <!-- <div slot="actions" class="flex max-w-sm gap-4">
+      <Button variant="link" href={appStoreDownloadLink}>
+        <Image src={appStoreImg} alt="App Store Image" width={200} />
+      </Button>
+
+      <Button variant="link" href={googlePlayDownloadLink}>
+        <Image src={googlePlayImg} alt="Google Play Image" width={200} />
+      </Button>
+    </div> -->
+  </Hero3>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    id="onboard__shader_section"
+    title=`Onboard on <span class="text-accent">DeFi</span>`
+    `
+    tagline="Take full controls of your digitals assets"
+    classes={{
+      container: 'shader__section mt-[100px]',
+      headline: {
+        title: 'text-6xl',
+      },
+    }}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="ft_01__shader_section"
+    items={[
+      {
+        icon: null,
+        description:
+          'Get started seamlessly! Connect or create an account in less than a minute. Whether through social login, email, or your existing wallet, our platform ensures a smooth onboarding experience. Take control of your financial path with ease.',
+      },
+    ]}
+    image={{
+      src: onBoardingImg,
+      alt: 'Create or connect an account',
+      class: 'onboading__image fitContent',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Onboard now',
+      href: '',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Connect to your Wallet<br />
+        Under a Minute
+      </h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    id="ft_02__shader_section"
+    isReversed
+    items={[
+      {
+        description:
+          'Safely deposit your liquidity without any restrictions or censorship into DeFi protocols across more than 40 markets and 8 EVM-Compatible blockchains. Earn substantial interest while retaining complete control over your assets.',
+        icon: null,
+      },
+    ]}
+    image={{
+      src: defiImg,
+      alt: 'Deposit liquidity & earn interest',
+      class: 'defi__image fitContent',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Start Deposit',
+      href: '',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Deposit Liquidity & Earn Interest
+      </h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    id="ft_03__shader_section"
+    items={[
+      {
+        description: `Unlock higher earnings without locking your assets! Liquid Staking offers attractive interest rates on your crypto, keeping your funds accessible at all times. It's the perfect balance of liquidity and profitability. Now it's time to maximize your returns.`,
+        icon: null,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Increase your Income with Liquid Staking
+      </h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    id="ft_04__shader_section"
+    isReversed
+    items={[
+      {
+        description: `Hexa Lite support Bitcoin, Solana and +20 EVM-Compatible blockchain such as Ethereum, Polygon, Binance Smart Chain, Optimism, Arbitrum, etc. without have to care about how to manage networks changes.`,
+        icon: null,
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Multi Chains</h3>
+    </Fragment>
+  </Content>
+
+  <Content
+    id="ft_05__shader_section"
+    items={[
+      {
+        description: `As an open-source and non-custodial platform, we don't store any user data or private keys. You retain complete control over your assets, enabling direct interaction with DeFi protocols without intermediaries smart contracts or third-party services,`,
+        icon: null,
+      },
+    ]}
+    image={`<svg xmlns="http://www.w3.org/2000/svg" class="githubImg" viewBox="0 0 512 512">
+      <path
+        d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z">
+      </path>
+    </svg>`}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Security & Privacy
+      </h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Partners  ************* -->
+  <PartnersList 
+    id="partners"
+    title="Partners"
+    subtitle='Hexa Lite Ecosystem and Integrations' />
+
+  <!-- Stats Widget ****************** -->
+
+  <!-- <Stats
+    title="Statistics of our app"
+    stats={[
+      { amount: '+30', icon: 'tabler:download',title: 'Chains' },
+      { amount: '+60', icon: 'tabler:users', title: 'DeFi Markets' },
+      { amount: '4.7', icon: 'tabler:user-star' },
+    ]}
+  /> -->
+
+  <!-- Testimonials Widget *********** -->
+
+  <!-- <Testimonials
+    id="testimonials__shader_section"
+    title="What our users say?"
+    testimonials={[
+      {
+        testimonial: `It's made exploring and downloading website templates a breeze. The interface is intuitive, and I had no trouble finding the perfect template for my project. It's an app that truly empowers users.`,
+        name: 'Cary Kennedy',
+        job: 'Film director',
+        image: {
+          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Cary Kennedy Image',
+        },
+      },
+      {
+        testimonial: `The app's seamless download process and intuitive layout have made selecting templates an enjoyable experience. Being able to preview and experiment with different designs before committing has saved me time and ensured I get the perfect look for my website.`,
+        name: 'Josh Wilkinson',
+        job: 'Product Manager',
+        image: {
+          src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Josh Wilkinson Image',
+        },
+      },
+      {
+        testimonial:
+          'I was able to download and use a professional website template within minutes. The step-by-step process and user-friendly interface made it easy for me to create a website that looks as if it was designed by a pro.',
+        name: 'Sidney Hansen',
+        job: 'Decorator',
+        image: {
+          src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Sidney Hansen Image',
+        },
+      },
+    ]}
+    callToAction={{
+      target: '_blank',
+      text: 'Read more testimonials',
+      href: 'https://github.com/onwidget/astrowind',
+      icon: 'tabler:chevron-right',
+    }}
+  /> -->
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    id="faqs"
+    title="Frequently Asked Questions"
+    tagline='FAQS'
+    subtitle='Dive into the following questions to gain insights into the powerful features that we offers and how it can elevate your crypto investment journey.'
+    columns={1}
+    items={[
+      {
+        title: "What is Hexa Lite?",
+        description: "Hexa Lite allow you to create or connect existing digital wallets and provide solution to buy digital assets with fiats, exchange at best rate, lend and borrow money on blockchain with DeFi protocols.",
+      },
+      {
+        title: "What is a digital wallet?",
+        description: "A digital wallet is a wallet that allows you to interact with digital assets like cryptocurrencies across DeFi protocols.",
+      },
+      {
+        title: "What is DeFi?",
+        description: "DeFi is an abbreviation of the phrase decentralized finance which generally refers to the digital assets and financial smart contracts, protocols, and decentralized applications built on chain.",
+      },
+      {
+        title: "What is a DeFi protocol?",
+        description: "A DeFi protocol is a smart contract or a set of smart contracts that can interact with each other to perform a set of actions.",
+      },
+      {
+        title: "What is a smart contract?",
+        description: "A smart contract is a computer program or a transaction protocol that is intended to automatically execute, control, or document legally relevant events and actions according to the terms of a contract or an agreement.",
+      },
+      {
+        title: "Why should I use DeFi?",
+        description: "DeFi is a permissionless and censorship resistant financial system that is available to anyone with an internet connection. It is a financial system that is built on the blockchain and is not controlled by any central authority.",
+      },
+      {
+        title: "Why should I use Hexa Lite?",
+        description: "Hexa Lite allow you to onboard to DeFi in a few click to earn interest on your assets, borrow money, exchange at best rate and more wihout any technical knowledge from blockchain or finance world and without any restriction or censorship.",
+      },
+      {
+        title: "Can I export my private key from a wallet created with Hexa Lite?",
+        description: "Of course! Wallets on Hexa Lite are created through Magic, which enables you to export your private key at any time. You can retrieve it her <a href='https://magic.link/' target='_blank'>https://magic.link/</a>.",
+      },
+      {
+        title: "Can I deposit FIAT money (USD, EUR, CHF) to Hexa Lite?",
+        description: "No. You cannot deposit and keep fiat at Hexa Lite because Hexa Lite is not a bank and does not provide any banking services. However, you can buy digital assets with FIAT money from our partners.",
+      },
+      {
+        title: "Can I deposit digital assets to Hexa Lite?",
+        description: "No. Hexa Lite is not a custodian wallet and does not provide any custodian services. Hexa Lite only provides a interface to interact with DeFi protocols and your wallet from the blockchain.",
+      },
+      {
+        title: "Can I use my wallet created with Hexa Lite on other platforms?",
+        description: "Yes. When you create a wallet with Hexa Lite, you are creating a wallet on the blockchain. You can use this wallet on any other platform that supports the same blockchain.",
+      },
+      {
+        title: "Which networks are supported?",
+        description: "Hexa Lite currently supports all majors EVM network, Solana and Bitcoin. You can get your wallet address for each networks by clicking on the authenticate badge on the top right corner of the screen.",
+      },
+      {
+        title: "What are the fees for swapping?",
+        description: "Hexa Lite charge 1% fees for swapping. However, the protocols that we integrate with may charge a fee for swapping and on-chain gas fees are applicable according to each network. That's why you have to get some ETH to pay for gas fees on Ethereum network and majors EVM network.",
+      },
+      {
+        title: "How pay on-chain transaction fees?",
+        description: "On-chain transactions fees are paid in the native currency of the network. For example, on Ethereum network, you have to pay gas fees in ETH. On Solana network, you have to pay gas fees in SOL. On Bitcoin network, you have to pay gas fees in BTC. Keep in mind that you have to get some native token to pay for gas fees on each network that you use. <br/>By default, Hexa Lite set network to Optimism which is a layer 2 solution on Ethereum network that use ETH to pay fees. You can change network by clicking on the authenticate badge on the top right corner of the screen.",
+      },
+      {
+        title: "Who is behind Hexa Lite?",
+        description: "Hexa Lite is an open-source software developed by HexaOne Labs, a swiss based developpers organization that work on blockchain and DeFi technologies. You can learn more about HexaOne Labs here <a href='https://hexaonelabs.com' target='_blank'>https://hexaonelabs.com</a>.",
+      }
+    ]}
+  />
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Explore Latest Articles"
+    information={`We're building an open financial system for everyone. Discover the latest news, updates, and insights to stay informed on your crypto journey.`}
+
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg__shader"></div>
+    </Fragment>
+  </BlogLatestPosts>
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    id="download"
+    title="Install Hexa Lite now!"
+    subtitle="Start your journey to financial freedom today."
+  >
+    <div slot="actions" class="flex max-w-sm gap-4">
+      <Button variant="link" href={appStoreDownloadLink}>
+        <Image src={appStoreImg} alt="App Store Image" width={200} />
+      </Button>
+
+      <Button variant="link" href={googlePlayDownloadLink}>
+        <Image src={googlePlayImg} alt="Google Play Image" width={200} />
+      </Button>
+    </div>
+  </CallToAction>
+</Layout>

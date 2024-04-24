@@ -1,0 +1,109 @@
+---
+
+import { getPermalink } from '~/utils/permalinks';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import aaveImg from '~/assets/images/Aave-Ghost-Gradient.svg';
+import solendImg from '~/assets/images/solend.svg';
+import lidoImg from '~/assets/images/lido.svg';
+import ankrImg from '~/assets/images/ankr.svg';
+import InchImg from '~/assets/images/1inch.svg';
+import lifiImg from '~/assets/images/lifi.svg';
+import axelarImg from '~/assets/images/axelar.svg';
+import magicImg from '~/assets/images/magic.svg';
+import mtPelerinImg from '~/assets/images/mtpelerin.png';
+
+import Image from '~/components/common/Image.astro';
+
+import Headline from '../ui/Headline.astro';
+
+
+
+const {
+  title = '',
+  subtitle = '',
+  tagline = '',
+  items = [],
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+
+const posts = [
+  {
+    imgUrl: aaveImg,
+    linkUrl: 'https://aave.com',
+    title: 'AAVE',
+  },
+  {
+    imgUrl: solendImg,
+    linkUrl: 'https://solend.fi',
+    title: 'SOLEND',
+  },
+  {
+    imgUrl: lidoImg,
+    linkUrl: 'https://lido.fi',
+    title: 'LIDO',
+  },
+  {
+    imgUrl: ankrImg,
+    linkUrl: 'https://ankr.com',
+    title: 'ANKR',
+  },
+  {
+    imgUrl: InchImg,
+    linkUrl: 'https://1inch.io',
+    title: '1INCH',
+  },
+  {
+    imgUrl: lifiImg,
+    linkUrl: 'https://li.fi',
+    title: 'LIFI',
+  },
+  {
+    imgUrl: axelarImg,
+    linkUrl: 'https://axelar.network',
+    title: 'AXELAR',
+  },
+  {
+    imgUrl: magicImg,
+    linkUrl: 'https://magic.link',
+    title: 'MAGIC',
+  },
+  {
+    imgUrl: mtPelerinImg,
+    linkUrl: 'https://mtpelerin.com',
+    title: 'MT.PELERIN',
+  },
+];
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={classes?.container as string} bg={bg}>
+  <Headline title={title} subtitle={subtitle} tagline={tagline} />
+
+  <div class="flex justify-center items-bottom flex-wrap">
+    {
+      posts.map(async (post) => (
+        <div class="text-center">
+          <div class="relative bg-transparent mb-6 px-10">
+            {post.imgUrl && (
+              <a href={post.linkUrl} target="_blank">
+                <Image
+                  src={post.imgUrl}
+                  class="rounded bg-transparent m-auto"
+                  widths={[65,65]}
+                  width={65}
+                  height={65}
+                  alt={post.title}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+            )}
+          </div>
+          <h4 class="mb-2 text-md font-light ">{post.title}</h4>
+        </div>
+      ))
+    }
+  </div>
+</WidgetWrapper>

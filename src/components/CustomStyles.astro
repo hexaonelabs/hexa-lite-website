@@ -1,0 +1,155 @@
+---
+import '@fontsource-variable/inter';
+
+// 'DM Sans'
+// Nunito
+// Dosis
+// Outfit
+// Roboto
+// Literata
+// 'IBM Plex Sans'
+// Karla
+// Poppins
+// 'Fira Sans'
+// 'Libre Franklin'
+// Inconsolata
+// Raleway
+// Oswald
+// 'Space Grotesk'
+// Urbanist
+
+---
+
+<style is:inline>
+  :root {
+    --aw-font-sans: 'InterVariable';
+    --aw-font-serif: 'InterVariable';
+    --aw-font-heading: 'InterVariable';
+
+    --aw-color-primary: rgb(0 144 255);
+    --aw-color-primary-rgb: 0, 144, 255;
+    --aw-color-secondary: rgb(76 204 230);
+    --aw-color-secondary-rgb: 76, 204, 230;
+    --aw-color-accent: linear-gradient(270deg, var(--aw-color-secondary),var(--aw-color-primary));
+
+    --aw-color-text-heading: 'InterVariable';
+    --aw-color-text-default: rgb(24, 13, 104);
+    --aw-color-text-muted: rgb(16 16 16 / 66%);
+    --aw-color-bg-page: rgb( 245,248,255);
+
+    --aw-color-bg-page-dark: rgb(24, 36, 73);
+    --aw-color-bg-page-shader: #eaf2ff;
+    --background-gradient: #e6eefe;
+
+    ::selection {
+      background-color: lavender;
+    }
+  }
+
+  .dark {
+    --aw-font-sans: 'InterVariable';
+    --aw-font-serif: 'InterVariable';
+    --aw-font-heading: 'InterVariable';
+
+    --aw-color-text-heading: rgb(247, 248, 248);
+    --aw-color-text-default: rgb(229 236 246);
+    --aw-color-text-muted: rgb(229 236 246 / 66%);
+    --aw-color-bg-page: rgb(24, 36, 73);
+    --aw-color-bg-page-shader: rgb(24, 36, 73);
+    --aw-background-gradient: linear-gradient(125deg,#182449, rgba(61, 158, 255, 0.2));
+
+    ::selection {
+      background-color: black;
+      color: snow;
+    }
+  }
+
+  .text-accent {
+    color: linear-gradient(270deg, var(--aw-color-secondary),var(--aw-color-primary));
+    background: linear-gradient(270deg, var(--aw-color-secondary),var(--aw-color-primary));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: #0000;
+  }
+
+  h1 .text-accent {
+    font-size: 5rem;
+  }
+
+  html, body {
+    font-size: 20px;
+  }
+
+  .gradientBg {
+    background: var(--aw-background-gradient);
+  }
+  #onboard__shader_section {
+    border-top: solid 1px rgba(var(--aw-color-primary-rgb), 0.5);
+    box-shadow: 0px -60px 60px 0px rgba(var(--aw-color-primary-rgb), 0.15);
+  }
+  section[id$="__shader_section"],
+  .bg__shader,
+  footer {
+    background: var(--aw-color-bg-page-shader);
+  }
+  section[id$="__shader_section"] h3 {
+    position: relative;
+    display: inline-block;
+  }
+  section[id$="__shader_section"] h3:after {
+    content: "";
+    position: absolute;
+    bottom: -0.8rem;
+    left: 0;
+    width: 280px;
+    height: 3px;
+    background: var(--aw-color-accent);
+    border-radius: 50px;
+  }
+
+  #download {
+    padding: 8rem 0;
+  }
+
+  .onboading__image {
+    min-width: 280px;
+    margin: 0px;
+    border-radius: 32px;
+    overflow: hidden;
+    border: solid 2px var(--aw-color-primary);
+    margin: auto;
+  }
+
+  .fitContent {
+    object-fit: unset!important;
+    max-width: fit-content;
+  }
+
+  .githubImg {
+    max-width: 256px;
+    margin: auto;
+    fill: var(--aw-color-text-default);
+  }
+
+  html.dark footer,
+  html.dark #partners {
+    background: rgba(0,0,0,0.2);
+  }
+
+  img.app__preview {
+    margin: 0 1rem;
+    transform: scale(1.3);
+    filter: drop-shadow(0px 0px 60px rgba(var(--aw-color-primary-rgb),0.2)) brightness(0.9) contrast(1.1);
+  }
+
+  @media screen and (max-width: 668px) {
+    img.app__preview {
+      transform: scale(1.1);
+    }
+  }
+
+  section {
+    overflow: hidden;
+  }
+
+</style>
