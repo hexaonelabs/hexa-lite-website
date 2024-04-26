@@ -18,6 +18,7 @@ import { headerData } from '~/navigation';
 import Hero3 from '~/components/widgets/Hero3.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import PartnersList from '~/components/widgets/Partners.astro';
+import { getPermalink } from '~/utils/permalinks';
 
 const appStoreImg = '~/assets/images/app-store.png';
 const appStoreDownloadLink = 'https://github.com/onwidget/astrowind';
@@ -27,7 +28,9 @@ const appDownloadLink = '#';
 
 const onBoardingImg = '~/assets/images/onboarding.png';
 const defiImg = '~/assets/images/coins-b.png';
-const githubImg = '~/assets/images/github.svg';
+const swapImg = '~/assets/images/swap.svg';
+const liquidStakingImg = '~/assets/images/Liquid-Staking.svg';
+const multichainImg = '~/assets/images/multichain.png';
 
 const googlePlayImg = '~/assets/images/google-play.png';
 const googlePlayDownloadLink = 'https://github.com/onwidget/astrowind';
@@ -56,7 +59,7 @@ const metadata = {
       },
       {
         text: 'Learn more',
-        href: '#onboard__shader_section',
+        href: '#onboard-on-defi',
       }]}
   >
     <Fragment slot="title">
@@ -86,21 +89,23 @@ const metadata = {
   <!-- Features3 Widget ************** -->
 
   <Features3
-    id="onboard__shader_section"
+    id="onboard-on-defi"
     title=`Onboard on <span class="text-accent">DeFi</span>`
     subtitle="Take full controls of your digitals assets"
     classes={{
-      container: 'shader__section mt-[100px] lg:pb-[0px]',
+      container: 'mt-[100px] lg:pb-[0px]',
+      wrapperClass: 'shader__section',
       headline: {
         title: 'text-6xl',
       },
     }}
   />
 
+
   <!-- Content Widget **************** -->
 
   <Content
-    id="ft_01__shader_section"
+    id="connect-to-your-wallet"
     items={[
       {
         icon: null,
@@ -118,6 +123,9 @@ const metadata = {
       text: 'Onboard now',
       href: '',
     }}
+    classes={{
+      wrapperClass: 'shader__section',
+    }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
@@ -128,8 +136,40 @@ const metadata = {
   </Content>
 
   <Content
-    id="ft_02__shader_section"
-    isReversed
+  id="swap-between-1000-tokens"    
+  isReversed
+  items={[
+    {
+      description: `
+      Hexa Lite provides a flexible and lightweight interface with seamless experience for swapping multiple tokens or bridging between Bitcoin, Solana and +20 EVM-Compatible blockchain such as Ethereum, Polygon, Binance Smart Chain, Optimism, Arbitrum. 
+      Always ensure to get the best rates and lowest fees by aggregating data from multiple decentralized exchanges and liquidity pools.
+      `,
+      icon: null,
+    },
+  ]}
+  image={{
+    src: swapImg,
+    alt: 'Swap between +1000 tokens at best rate and lowest fees',
+    class: 'swap__image fitContent',
+  }}
+  callToAction={{
+    target: '_blank',
+    text: 'Swap any Token',
+    href: '',
+  }}
+  classes={{
+    wrapperClass: 'shader__section',
+  }}
+>
+  <Fragment slot="content">
+    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      Swap between +1000 tokens at best rate and lowest fees
+    </h3>
+  </Fragment>
+</Content>
+
+  <Content
+    id="defi-loan-markets"  
     items={[
       {
         description:
@@ -147,25 +187,43 @@ const metadata = {
       text: 'Start Deposit',
       href: '',
     }}
+    classes={{
+      wrapperClass: 'shader__section',
+    }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Deposit Liquidity & Earn Interest
+        Deposit Liquidity & Earn Interest on DeFi Loan Markets
       </h3>
     </Fragment>
   </Content>
 
   <Content
-    id="ft_03__shader_section"
+    id="increase-income-with-liquid-staking"  
+    isReversed
     items={[
       {
-        description: `Unlock higher earnings without locking your assets! Liquid Staking offers attractive interest rates on your crypto, keeping your funds accessible at all times. It's the perfect balance of liquidity and profitability. Now it's time to maximize your returns.`,
+        description: `Unlock higher earnings without locking your assets! <br/>
+        Liquid Staking offers attractive interest rates on your crypto, keeping your funds accessible at all times. 
+        It's the perfect balance of liquidity and profitability. Now it's time to maximize your returns.
+        Take advantage of the staking rewards without need to lock your assets for a specific period and keep your assets liquid 
+        to use them at any time or to participate in other DeFi protocols.
+        `,
         icon: null,
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-      alt: 'Colorful Image',
+      src: liquidStakingImg, //'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+      alt: 'Earn with Liquid Staking image',
+      class: 'liquid_staking__image',
+    }}
+    callToAction={{
+      target: '_blank',
+      text: 'Start Liquid Staking',
+      href: '',
+    }}
+    classes={{
+      wrapperClass: 'shader__section',
     }}
   >
     <Fragment slot="content">
@@ -176,29 +234,14 @@ const metadata = {
   </Content>
 
   <Content
-    id="ft_04__shader_section"
-    isReversed
+    id="open-source-and-non-custodial" 
     items={[
       {
-        description: `Hexa Lite support Bitcoin, Solana and +20 EVM-Compatible blockchain such as Ethereum, Polygon, Binance Smart Chain, Optimism, Arbitrum, etc. without have to care about how to manage networks changes.`,
-        icon: null,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Multi Chains</h3>
-    </Fragment>
-  </Content>
-
-  <Content
-    id="ft_05__shader_section"
-    items={[
-      {
-        description: `As an open-source and non-custodial platform, we don't store any user data or private keys. You retain complete control over your assets, enabling direct interaction with DeFi protocols without intermediaries smart contracts or third-party services,`,
+        description: `
+          Hexa Lite software don't store any private keys, seed phrases or sensitive data.
+          You retain complete control over your assets, enabling direct interaction with DeFi protocols without intermediaries smart contracts or third-party services. 
+          Users can access the source code on GitHub to verify the software's integrity and security.
+          `,
         icon: null,
       },
     ]}
@@ -207,10 +250,17 @@ const metadata = {
         d="M256 32C132.3 32 32 134.9 32 261.7c0 101.5 64.2 187.5 153.2 217.9a17.56 17.56 0 003.8.4c8.3 0 11.5-6.1 11.5-11.4 0-5.5-.2-19.9-.3-39.1a102.4 102.4 0 01-22.6 2.7c-43.1 0-52.9-33.5-52.9-33.5-10.2-26.5-24.9-33.6-24.9-33.6-19.5-13.7-.1-14.1 1.4-14.1h.1c22.5 2 34.3 23.8 34.3 23.8 11.2 19.6 26.2 25.1 39.6 25.1a63 63 0 0025.6-6c2-14.8 7.8-24.9 14.2-30.7-49.7-5.8-102-25.5-102-113.5 0-25.1 8.7-45.6 23-61.6-2.3-5.8-10-29.2 2.2-60.8a18.64 18.64 0 015-.5c8.1 0 26.4 3.1 56.6 24.1a208.21 208.21 0 01112.2 0c30.2-21 48.5-24.1 56.6-24.1a18.64 18.64 0 015 .5c12.2 31.6 4.5 55 2.2 60.8 14.3 16.1 23 36.6 23 61.6 0 88.2-52.4 107.6-102.3 113.3 8 7.1 15.2 21.1 15.2 42.5 0 30.7-.3 55.5-.3 63 0 5.4 3.1 11.5 11.4 11.5a19.35 19.35 0 004-.4C415.9 449.2 480 363.1 480 261.7 480 134.9 379.7 32 256 32z">
       </path>
     </svg>`}
+    classes={{
+      wrapperClass: 'shader__section',
+    }}
+    callToAction={{
+      text: 'About the Teams',
+      href: getPermalink('/team'),
+    }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Security & Privacy
+        Open-source & Non-Custodial
       </h3>
     </Fragment>
   </Content>
@@ -218,8 +268,8 @@ const metadata = {
   <!-- Content Partners  ************* -->
   <PartnersList 
     id="partners"
-    title="Partners"
-    subtitle='Hexa Lite Ecosystem and Integrations' />
+    title="Partnerships & Integrations"
+    subtitle='Hexa Lite developper core team believe in the power of collaboration to drive innovation and create exceptional experiences' />
 
   <!-- Stats Widget ****************** -->
 
@@ -230,49 +280,6 @@ const metadata = {
       { amount: '+60', icon: 'tabler:users', title: 'DeFi Markets' },
       { amount: '4.7', icon: 'tabler:user-star' },
     ]}
-  /> -->
-
-  <!-- Testimonials Widget *********** -->
-
-  <!-- <Testimonials
-    id="testimonials__shader_section"
-    title="What our users say?"
-    testimonials={[
-      {
-        testimonial: `It's made exploring and downloading website templates a breeze. The interface is intuitive, and I had no trouble finding the perfect template for my project. It's an app that truly empowers users.`,
-        name: 'Cary Kennedy',
-        job: 'Film director',
-        image: {
-          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Cary Kennedy Image',
-        },
-      },
-      {
-        testimonial: `The app's seamless download process and intuitive layout have made selecting templates an enjoyable experience. Being able to preview and experiment with different designs before committing has saved me time and ensured I get the perfect look for my website.`,
-        name: 'Josh Wilkinson',
-        job: 'Product Manager',
-        image: {
-          src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Josh Wilkinson Image',
-        },
-      },
-      {
-        testimonial:
-          'I was able to download and use a professional website template within minutes. The step-by-step process and user-friendly interface made it easy for me to create a website that looks as if it was designed by a pro.',
-        name: 'Sidney Hansen',
-        job: 'Decorator',
-        image: {
-          src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-          alt: 'Sidney Hansen Image',
-        },
-      },
-    ]}
-    callToAction={{
-      target: '_blank',
-      text: 'Read more testimonials',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:chevron-right',
-    }}
   /> -->
 
   <!-- FAQs Widget ******************* -->

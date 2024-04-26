@@ -2,33 +2,37 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
   links: [
-    // {
-    //   text: 'Homes',
-    //   links: [
-    //     {
-    //       text: 'SaaS',
-    //       href: getPermalink('/homes/saas'),
-    //     },
-    //     {
-    //       text: 'Startup',
-    //       href: getPermalink('/homes/startup'),
-    //     },
-    //     {
-    //       text: 'Mobile App',
-    //       href: getPermalink('/homes/mobile-app'),
-    //     },
-    //     {
-    //       text: 'Personal',
-    //       href: getPermalink('/homes/personal'),
-    //     },
-    //   ],
-    // },
+    {
+      text: 'Features',
+      links: [
+        {
+          text: 'Connect Under a Minute',
+          href: '#connect-to-your-wallet',
+        },
+        {
+          text: 'Swap between +1000 tokens',
+          href: '#swap-between-1000-tokens',
+        },
+        {
+          text: 'Earn more with DeFi Loan Markets',
+          href: '#defi-loan-markets',
+        },
+        {
+          text: 'Increase Income with Liquid Staking',
+          href: '#increase-income-with-liquid-staking',
+        },
+        {
+          text: 'Open Source and Non-Custodial',
+          href: '#open-source-and-non-custodial',
+        }
+      ],
+    },
     // {
     //   text: 'Pages',
     //   links: [
     //     {
     //       text: 'Features (Anchor Link)',
-    //       href: getPermalink('/#features'),
+    //       href: getPermalink('/homes/startup'),
     //     },
     //     {
     //       text: 'Services',
@@ -86,8 +90,12 @@ export const headerData = {
     //   ],
     // },
     {
-      text: 'About',
-      href: getPermalink('/about'),
+      text: 'Learn',
+      href: getPermalink('/learn'),
+    },
+    {
+      text: 'About the Team',
+      href: getPermalink('/team'),
     },
     {
       text: 'Blog',
@@ -115,13 +123,9 @@ export const headerData = {
       //   },
       // ],
     },
-    {
-      text: 'Widgets',
-      href: '#',
-    },
   ],
   actions: [
-    { text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }
+    { text: 'Download App', href: getPermalink('/download'), target: '_blank' }
   ],
 };
 
@@ -130,10 +134,8 @@ export const footerData = {
     {
       title: 'Product',
       links: [
-        { text: 'Features', href: '#' },
+        { text: 'Features', href: getPermalink('/#onboard-on-defi') },
         { text: 'Security', href: '#' },
-        { text: 'Team', href: '#' },
-        { text: 'Enterprise', href: '#' },
         { text: 'Customer stories', href: '#' },
         { text: 'Pricing', href: '#' },
         { text: 'Resources', href: '#' },
@@ -162,8 +164,8 @@ export const footerData = {
     {
       title: 'Company',
       links: [
-        { text: 'About', href: '#' },
-        { text: 'Blog', href: '#' },
+        { text: 'About the Team', href: getPermalink('/team') },
+        { text: 'Blog', href: getBlogPermalink() },
         { text: 'Careers', href: '#' },
         { text: 'Press', href: '#' },
         { text: 'Inclusion', href: '#' },
