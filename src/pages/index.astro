@@ -24,7 +24,7 @@ const appStoreImg = '~/assets/images/app-store.png';
 const appStoreDownloadLink = 'https://github.com/onwidget/astrowind';
 
 const appPreview = '~/assets/images/preview-app.png';
-const appDownloadLink = '#';
+const appDownloadLink =  getPermalink('/download');
 
 const onBoardingImg = '~/assets/images/onboarding.png';
 const defiImg = '~/assets/images/coins-b.png';
@@ -119,16 +119,15 @@ const metadata = {
       class: 'onboading__image fitContent',
     }}
     callToAction={{
-      target: '_blank',
       text: 'Onboard now',
-      href: '',
+      href: getPermalink('/connect-to-your-wallet'),
     }}
     classes={{
       wrapperClass: 'shader__section',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      <h3 class="underlinedColor text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         Connect to your Wallet<br />
         Under a Minute
       </h3>
@@ -153,16 +152,15 @@ const metadata = {
     class: 'swap__image fitContent',
   }}
   callToAction={{
-    target: '_blank',
     text: 'Swap any Token',
-    href: '',
+    href: getPermalink('/swap-tokens'),
   }}
   classes={{
     wrapperClass: 'shader__section',
   }}
 >
   <Fragment slot="content">
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+    <h3 class="underlinedColor text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
       Swap between +1000 tokens at best rate and lowest fees
     </h3>
   </Fragment>
@@ -183,16 +181,15 @@ const metadata = {
       class: 'defi__image fitContent',
     }}
     callToAction={{
-      target: '_blank',
       text: 'Start Deposit',
-      href: '',
+      href: getPermalink('/defi-loan-markets'),
     }}
     classes={{
       wrapperClass: 'shader__section',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      <h3 class="underlinedColor text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         Deposit Liquidity & Earn Interest on DeFi Loan Markets
       </h3>
     </Fragment>
@@ -218,16 +215,15 @@ const metadata = {
       class: 'liquid_staking__image',
     }}
     callToAction={{
-      target: '_blank',
       text: 'Start Liquid Staking',
-      href: '',
+      href: getPermalink('/liquid-staking'),
     }}
     classes={{
       wrapperClass: 'shader__section',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      <h3 class="underlinedColor text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         Increase your Income with Liquid Staking
       </h3>
     </Fragment>
@@ -259,7 +255,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+      <h3 class="underlinedColor text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         Open-source & Non-Custodial
       </h3>
     </Fragment>

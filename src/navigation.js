@@ -7,23 +7,23 @@ export const headerData = {
       links: [
         {
           text: 'Connect Under a Minute',
-          href: '#connect-to-your-wallet',
+          href: getPermalink('/#connect-to-your-wallet'),
         },
         {
           text: 'Swap between +1000 tokens',
-          href: '#swap-between-1000-tokens',
+          href: getPermalink('/#swap-between-1000-tokens'),
         },
         {
           text: 'Earn more with DeFi Loan Markets',
-          href: '#defi-loan-markets',
+          href: getPermalink('/#defi-loan-markets'),
         },
         {
           text: 'Increase Income with Liquid Staking',
-          href: '#increase-income-with-liquid-staking',
+          href: getPermalink('/#increase-income-with-liquid-staking'),
         },
         {
           text: 'Open Source and Non-Custodial',
-          href: '#open-source-and-non-custodial',
+          href: getPermalink('/#open-source-and-non-custodial'),
         }
       ],
     },
@@ -135,42 +135,38 @@ export const footerData = {
       title: 'Product',
       links: [
         { text: 'Features', href: getPermalink('/#onboard-on-defi') },
-        { text: 'Security', href: '#' },
-        { text: 'Customer stories', href: '#' },
-        { text: 'Pricing', href: '#' },
-        { text: 'Resources', href: '#' },
+        { text: 'Connect Under a Minute', href: getPermalink('/connect-to-your-wallet') },
+        { text: 'Swap tokens', href: getPermalink('/swap-tokens') },
+        { text: 'DeFi Loan Markets', href: getPermalink('/defi-loan-markets') },
+        { text: 'Liquid Staking', href: getPermalink('/liquid-staking') },
+        { text: 'Fiat onRamp', href: getPermalink('/fiat-onramp') },
       ],
     },
     {
       title: 'Platform',
       links: [
-        { text: 'Developer API', href: '#' },
-        { text: 'Partners', href: '#' },
-        { text: 'Atom', href: '#' },
-        { text: 'Electron', href: '#' },
-        { text: 'AstroWind Desktop', href: '#' },
+        { text: 'Multi Device App', href: getPermalink('/multi-device-app') },
+        { text: 'Download', href: getPermalink('/multi-device-app') },
+        { text: 'Launch App', href: 'https://app.hexa-lite.io' },
       ],
     },
-    {
-      title: 'Support',
-      links: [
-        { text: 'Docs', href: '#' },
-        { text: 'Community Forum', href: '#' },
-        { text: 'Professional Services', href: '#' },
-        { text: 'Skills', href: '#' },
-        { text: 'Status', href: '#' },
-      ],
-    },
+    // {
+    //   title: 'Support',
+    //   links: [
+    //     { text: 'Docs', href: '#' },
+    //     { text: 'Community Forum', href: '#' },
+    //     { text: 'Professional Services', href: '#' },
+    //     { text: 'Skills', href: '#' },
+    //     { text: 'Status', href: '#' },
+    //   ],
+    // },
     {
       title: 'Company',
       links: [
         { text: 'About the Team', href: getPermalink('/team') },
         { text: 'Blog', href: getBlogPermalink() },
-        { text: 'Careers', href: '#' },
-        { text: 'Press', href: '#' },
-        { text: 'Inclusion', href: '#' },
-        { text: 'Social Impact', href: '#' },
-        { text: 'Shop', href: '#' },
+        { text: 'Snapshot', href: 'https://snapshot.org/#/hexaonelabs.eth' },
+        { text: 'HexaOne Labs', href: 'https://hexaonelabs.com' },
       ],
     },
   ],
