@@ -1,6 +1,6 @@
 site:
   name: Hexa Lite
-  site: 'https://astrowind.vercel.app'
+  site: 'https://hexa-lite.io'
   base: '/'
   trailingSlash: false
 
@@ -18,13 +18,13 @@ metadata:
   openGraph:
     site_name: Hexa Lite
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/preview-app.png'
         width: 1200
         height: 628
     type: website
   twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
+    handle: '@hexa_one_labs'
+    site: '@hexa_one_labs'
     cardType: summary_large_image
 
 i18n:
