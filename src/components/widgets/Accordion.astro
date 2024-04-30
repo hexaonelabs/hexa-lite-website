@@ -1,0 +1,41 @@
+---
+import { Icon } from 'astro-icon/components';
+
+
+
+interface Props {
+  title: string;
+  details: string;
+}
+
+const { title, details } = Astro.props as Props;
+---
+
+<div class="accordion group relative">
+  <button
+    class="accordion__button flex w-full flex-1 items-center justify-between gap-2 p-3 text-left font-medium transition hover:text-primary sm:px-4"
+    type="button"
+    id={`${title} accordion menu button`}
+    aria-expanded="false"
+    aria-controls={`${title} accordion menu content`}
+  >
+    {title}
+
+    <!-- if using astro and the astro-icon package -->
+    <Icon
+      name="tabler:chevron-down"
+      aria-hidden="true"
+      class="accordion__chevron h-7 w-7 shrink-0 transition-transform"
+    />
+  </button>
+
+  <div
+    id={`${title} accordion menu content`}
+    aria-labelledby={`${title} accordion menu button`}
+    class="accordion__content hidden max-h-0 overflow-hidden px-3 transition-all duration-300 ease-in-out sm:px-4"
+  >
+    <p class="text-sm mb-4 mt-1 max-w-full transition-[height]">
+      {details}
+    </p>
+  </div>
+</div>

@@ -3,118 +3,315 @@ title: 'Terms and Conditions'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: January 06, 2023
+_Last updated_: January 03, 2024
 
 Please read these terms and conditions carefully before using Our Service.
 
-## Interpretation and Definitions
+# HEXA LITE TERMS OF SERVICE
 
-### Interpretation
+Effective date: 03 January 2024
+By accessing or using the Platform, you agree to be legally bound by these Terms.
+Please read this document carefully. If you do not agree with one or more provisions of
+these Terms, you should not use the Platform.
 
-The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+1. GENERAL
+2. PERMITTED USE
+3. USER’S RESPONSIBILITIES AND ASSUMPTION OF RISKS
+4. INTELLECTUAL PROPERTY
+5. FORCE MAJEURE
+6. DISCLAIMER OF WARRANTIES
+7. LIMITATION OF LIABILITY
+8. INDEMNIFICATION
+9. SEVERITY
+10. GOVERNING LAW AND DISPUTES
+11. MISCELLANEOUS
+12. CONTACT
 
-### Definitions
+## 1.GENERAL
+These Hexa Lite Terms and Conditions (the “Terms”) govern an individual user’s or a legal
+entity’s (the “user” and “you”) access to and use of the Hexa Lite software: https://
+github.com/hexaonelabs/hexa-lite, the related software applications and services
+(collectively, the “Platform”). These Terms outline the terms and conditions of user’s
+access and use of the Platform.
 
-For the purposes of these Terms and Conditions:
+### 1.2 License to use the Platform.
+Hexa Lite grants the user a worldwide, personal, revocable, non-exclusive, nontransferable and limited license to use the Platform pursuant to these Terms.
 
-- **Affiliate** means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
+### 1.3 Disclaimer.
+Although Hexa Lite regularly monitors the information available on the Platform, Hexa Lite
+cannot guarantee the accuracy, reliability, currency, relevance, and completeness of all
+information, whether provided by Hexa Lite or by third parties.
 
-- **Country** refers to: California, United States
+### 1.4 Third-party links.
+The Platform may contain links to websites, applications, and other online sources owned
+and operated by third parties. Hexa Lite is not responsible or liable in any manner for the
+content of such third-party links, information, and advertisements, as well as the security
+and privacy practices deployed by the operators of the third-party websites. The user is
+solely responsible for exercising due diligence before clicking on any of such third-party
+links.
 
-- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to AstroWind LLC, 1 Cupertino, CA 95014.
+### 1.5 Age limitations.
+The Platform cannot be used by persons who cannot conclude legally binding
+agreements in their country of residence.
 
-- **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
+### 1.7 About the Platform. 
+Subject to availability, the Platform allows you to: (i) by using the third-party service
+provider https://magic.link, create your digital wallet for the purposes of managing your
+decentralized finances (“DeFi”) portfolio (e.g., debts, assets, liquidity); (ii) conduct certain
+DeFi transactions (e.g., exchange, invest and re-balance supported DeFi platforms); (iii)
+access certain supported DeFi applications; and (iv) access unique investment
+opportunities. THE PLATFORM IS A NON-CUSTODIAL PLATFORM AND HEXA LITE
+DOES NOT HAVE ACCESS TO YOUR PRIVATE KEY AND CANNOT INITIATE ANY DEFI
+TRANSFERS WITHOUT YOU BEING LOGGED IN. HEXA LITE IS NOT A BROKER OR
+INTERMEDIARY AND IT IS IN NO WAY YOUR AGENT, ADVISOR, OR CUSTODIAN.
+THEREFORE, HEXA LITE DOES NOT HAVE A FIDUCIARY RELATIONSHIP OR
+OBLIGATION TO YOU REGARDING ANY DECISIONS OR ACTIVITIES THAT YOU
+UNDERTAKE WHILE USING THE PLATFORM. HEXA LITE DOES NOT HOST OR
+MAINTAIN THIRD-PARTY SERVICES ACCESSIBLE THROUGH THE PLATFORM AND
+DOES NOT PARTICIPATE IN ANY TRANSACTIONS, OR RECOMMEND, ENDORSE, OR
+OTHERWISE TAKE A POSITION ABOUT YOUR USE OF THE PLATFORM.
 
-- **Service** refers to the Website.
+## 2. PERMITTED USE
 
-- **Terms and Conditions** (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement is a Demo.
+### 2.1 It is the user’s responsibility to assess whether the use of the Platform is in
+compliance with the local laws and regulations. If a user's use of the Platform is
+prohibited by the applicable laws, regulations, or economic sanctions, the user is not
+authorized to use the Platform. If the user is required to obtain permits or licenses for
+using the Platform, it is the user’s responsibility to obtain those permits and licenses prior
+to the use of the Platform. Hexa Lite shall not be responsible for user’s use of the Platform
+in a way that violates the applicable laws, regulations, or sanctions.
 
-- **Third-party Social Media Service** means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.
+### 2.2 The user is not permitted to use the Platform in any manner that substitutes or
+contributes to the following activities (the list is representative and not exhaustive):
 
-- **Website** refers to AstroWind, accessible from [https://astrowind.vercel.app](https://astrowind.vercel.app)
+- Any unlawful activity, including violation of any laws, statutes, ordinances, or
+regulations;
+- Intellectual property (e.g., copyright or trademark) infringement;
+- Any unauthorized access to machines, programs, data, or committing any other forms
+of cyber offenses;
+- Promotion and encouragement of, or participation in terrorist activities of any sort;
+- Exploitation of children in any way;
+- Fraud;
+- Provision of false, inaccurate, or misleading information;
+- Spreading of malware (e.g., viruses, worms, Trojan horses), spam, and illegal
+messaging;
+- Spreading ethnically, racially, or otherwise objectionable information;
+- Spreading sexually explicit, libellous, harassing, defamatory, abusive, profane, vulgar,
+threatening, hateful, and obscene behaviour;
+- Copying, distributing, renting, reselling, modifying, compromising, damaging, disabling,
+impairing, and overburdening the Platform;
+- Gambling, including contests, lotteries, games of chance, bidding fee auctions, sports
+forecasting or odds making, Internet gaming, fantasy sports leagues with cash prizes,
+and sweepstakes;
+- Interfering with or abusing other users of the Platform;
+- Using bots, scripts, and other automated methods; and
+- Collecting and disclosing any information about other users of the Platform. 
 
-- **You** means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
+### 2.3 Breach of the Terms.
+If Hexa Lite believes, at its sole discretion, that the user’s use of the Platform violates
+these Terms and it is appropriate, necessary or desirable to do so, Hexa Lite may:
+- Send the user a formal warning;
+- Temporarily or permanently prohibit user’s access to the Platform;
 
-## Acknowledgment
+## 3. USER’S RESPONSIBILITIES AND ASSUMPTION OF RISKS
 
-These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.
+### 3.1 The Wallet. The Platform allows the user to create a digital wallet that can store and
+transfer the supported virtual currencies (the “Wallet”). The Wallet may be used to track
+and monitor a user’s portfolio of virtual currencies and interact with decentralized
+protocols and applications (e.g., virtual currency markets, boards, or interfaces allowing
+for financial transactions). The Wallet can be created by using the third-party service
+provider https://magic.link. The user must at all times keep the Wallet, the related access
+credentials (e.g., private keys, pin codes and passwords) and the associated computing
+devices safe and secure. Hexa Lite bears no responsibility for any unauthorized access of
+the Wallet. HEXA LITE DOES NOT HAVE ACCESS TO VIRTUAL CURRENCIES IN THE
+WALLETS; HEXA LITE DOES NOT STORE PRIVATE KEYS OR OTHER CREDENTIALS
+USED FOR ACCESSING THE WALLETS AND HEXA LITE NEVER REQUESTS THE USER
+TO PROVIDE HEXA LITE WITH SUCH INFORMATION.
 
-Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and others who access or use the Service.
+### 3.2 The Transactions.
+If the user conducts any transactions through the Platform (the “Transactions”), Hexa Lite
+does not: (i) have duty to inquire into or investigate the validity or accuracy of any
+Transaction; (ii) have control over networks or virtual currencies; (iii) ensure that any
+transaction details the user submits or receives through the Platform can be confirmed on
+the network; (iv) facilitate cancellation or modification requests; or (v) assist the user with
+any financial or technical advice pertaining to the Transactions or the Platform.
 
-By accessing or using the Service You agree to be bound by these Terms and Conditions. If You disagree with any part of these Terms and Conditions then You may not access the Service.
+### 3.3 Hexa Lite’s role.
+Hexa Lite is not a cryptocurrency exchange, broker, intermediary, advisor, agent, or
+custodian. Hexa Lite’s relationship with the user is not a fiduciary relationship or
+obligation to the user with regard to any action or decision taken as a result of the user’s
+use of the Platform. Hexa Lite further: (i) does not assume responsibility for any
+advancements in cryptography which could render inoperative cryptographic algorithms;
+(ii) makes no guarantees as to the security of any networks; (iii) makes no warranties as to
+the markets in which decentralized finances are traded; (iv) is not liable for any hacks,
+double spending, stolen currencies, or any other attacks on any network; (v) is not liable
+for any hacks or malicious attempts to obtain access to the Wallets; (vi) is not party to or
+responsible for any illegal activity the user engages in when using the Platform; (vii) takes
+no responsibility for the Transactions that may not be completed, modified, canceled, or
+are substantially delayed, or fail; and (viii) is not regulated by any regulatory agency and is
+not subject to the examination or reporting requirements of such agencies.
 
-You represent that you are over the age of 18\. The Company does not permit those under 18 to use the Service.
+### 3.4 Risks. Dealing with decentralized finances has substantial risks as outlined in the
+Risks Disclaimer. By using the Platform, the user acknowledges and agrees that the user
+understands the risks associated with DeFi (e.g., virtual currencies and blockchain
+technologies) and user’s use of the Platform. Unless explicitly provided in writing, Hexa
+Lite does not participate in any Transactions or accepts any responsibility for user’s use of
+the Platform. Hexa Lite has no responsibility or liability for such risks. The user hereby
+irrevocably waives, releases and discharges all claims, whether known or unknown, 
+against Hexa Lite, its affiliates, and respective shareholders, members, directors, officers,
+employees, agents and representatives related to any of the risks set forth in these Terms.
 
-Your access to and use of the Service is also conditioned on Your acceptance of and compliance with the Privacy Policy of the Company. Our Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your personal information when You use the Application or the Website and tells You about Your privacy rights and how the law protects You. Please read Our Privacy Policy carefully before using Our Service.
+### 3.5 User’s responsibilities.
+The user hereby acknowledges and agrees that the user, cumulatively:
 
-## Links to Other Websites
+- Has the necessary technical expertise and ability to review and evaluate the security,
+integrity and operation of the user’s Wallet;
+- Has the knowledge, experience, understanding, and information necessary to make
+user’s own evaluation of the merits, risks, and applicable compliance requirements of
+any use of the user’s Wallet and the Platform;
+- Understands and accepts the risks associated with the user’s Wallet and the use of the
+Platform;
+- Is responsible for conducting research pertaining to the risks specific to any particular
+blockchain technology, virtual currency, or other aspect of DeFi as necessary for the
+use of the Platform;
+- To the maximum extent permitted by the applicable law, the user shall take
+responsibility for all activities and transactions that occur in connection with user’s use
+of the Platform, including, without limitation, any authorized or unauthorized access to
+the user’s Wallet; and
+- The protocols governing the operation of networks may be subject to change at any
+time and such changes may materially alter networks, virtual currencies, the
+Transactions, or the Platform.
 
-Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company.
+### 3.6 Taxes and other duties.
+The user shall be responsible for determining, paying, withholding, filing, and reporting all
+taxes, duties, and other governmental assessments associated with the user’s activities
+on the Platform.
 
-The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such web sites or services.
+### 3.7 User’s content.
+The user acknowledges that all content is the sole responsibility of the party from whom
+the content originates. This means that the user, and not us, is solely responsible for the
+content uploaded, posted, submitted, e-mailed, transmitted, or otherwise made available
+through the Platform.
 
-We strongly advise You to read the terms and conditions and privacy policies of any third-party web sites or services that You visit.
+## 4. INTELLECTUAL PROPERTY
 
-## Termination
+### 4.1 The Platform Content. Most of the content available on the Platform, including all
+information, software, data, logos, marks, designs, graphics, pictures, video files, sound
+files, illustrations, graphics, and similar (collectively, the “Platform Content”) is owned by
+Hexa Lite, its partners, agents, licensors, vendors, and/or other content providers. The
+Platform Content is protected by applicable intellectual property laws and international
+treaties. The user is not allowed, without obtaining prior written authorisation from Hexa
+Lite, to copy, distribute, make available, disassemble, make alterations, decompile,
+reverse engineer, translate, adapt, rent, loan, use, lease or attempt to grant other rights to
+the Platform Content to third parties, or use any manual or automated means to scrape
+any content available on the Platform.
 
-We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions.
+### 4.2 The Hexa Lite brand.
+The user may not use the brand, the word or figurative trademarks associated with Hexa
+Lite, the Platform, or third-party trademarks without prior consent of a trademark owner.
+The user is not allowed to use any brands and trademarks in any way that suggests that 
+Hexa Lite sponsors, endorses, or associates with the user without obtaining prior written
+consent from Hexa Lite.
 
-Upon termination, Your right to use the Service will cease immediately.
+### 4.3 Feedback. If the user provides any feedback or suggestions (collectively, the
+“Feedback”) pertaining to the Platform or Hexa Lite, Hexa Lite will be entitled to use the
+Feedback without restriction. The user hereby irrevocably assigns to Hexa Lite all right,
+title, and interest in and to the Feedback.
 
-## Limitation of Liability
+## 5. FORCE MAJEURE
+The availability of the Platform may be affected by factors, which Hexa Lite cannot
+control, such as bandwidth problems, equipment failure, acts and omissions of thirdparties, or force majeure events, including, but not limited to: strikes; work stoppages;
+accidents; acts of war or terrorism; civil or military disturbances; nuclear or natural
+catastrophes and interruptions; shortage of supply, breakdowns, loss or malfunctions of
+utilities and communications or computer (software and hardware) services. Hexa Lite
+takes no responsibility for the unavailability of the Platform caused by such factors.
 
-Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service.
+## 6. DISCLAIMER OF WARRANTIES
 
-To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of this Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.
+### 6.1 Hexa Lite provides the Platform on “AS AVAILABLE”, “AS IS”, and “WITH ALL FAULTS” basis. 
 
-Some states do not allow the exclusion of implied warranties or limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply. In these states, each party's liability will be limited to the greatest extent permitted by law.
+To the extent permitted by the applicable law, Hexa Lite does not make
+any representations or warranties about the reliability, suitability, and accuracy, for any
+purpose, of the Platform or other content featured on or accessed by using the Platform,
+whether provider by Hexa Lite, the user, or by third parties, and hereby disclaims all
+warranties regarding the Platform and its operation.
 
-## "AS IS" and "AS AVAILABLE" Disclaimer
+### 6.2 It is the user’s sole responsibility to verify and assess the fit for the purpose of the
+Platform prior to using it and to decide whether or not the Platform fits for the intended
+use.
 
-The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective licensors and service providers, expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the Service, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise out of course of dealing, course of performance, usage or trade practice. Without limitation to the foregoing, the Company provides no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.
+### 6.3 By using the Platform, the user acknowledges that Hexa Lite may use third-party
+suppliers to provide software, hardware, storage, networking, and other technological
+services. The user cannot select or decline the third-party suppliers. The acts and
+omissions of third-party suppliers may be outside of Hexa Lite’s reasonable control. To
+the maximum extent permitted by law, Hexa Lite excludes any liability for any loss or
+damage resulting from the acts and omissions of such third-party suppliers.
 
-Without limiting the foregoing, neither the Company nor any of the company's provider makes any representation or warranty of any kind, express or implied: (i) as to the operation or availability of the Service, or the information, content, and materials or products included thereon; (ii) that the Service will be uninterrupted or error-free; (iii) as to the accuracy, reliability, or currency of any information or content provided through the Service; or (iv) that the Service, its servers, the content, or e-mails sent from or on behalf of the Company are free of viruses, scripts, trojan horses, worms, malware, timebombs or other harmful components.
+### 6.4 Nothing in these Terms shall affect any statutory rights that the user is entitled to as a
+consumer and that the user cannot contractually agree to alter or waive.
 
-Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on applicable statutory rights of a consumer, so some or all of the above exclusions and limitations may not apply to You. But in such a case the exclusions and limitations set forth in this section shall be applied to the greatest extent enforceable under applicable law.
+## 7. LIMITATION OF LIABILITY
 
-## Governing Law
+### 7.1 Unless otherwise excluded or limited by the applicable law, Hexa Lite will not be liable
+for any damages, including, but not limited to, incidental, punitive, special or other related
+damages, arising out or in connection with user’s access and use of the Platform, any
+content made available through the Platform, any transactions concluded through the
+Platform, or use of the Platform for unauthorised or unlawful purposes. The user agrees
+not to hold Hexa Lite liable in respect of any losses arising out of any event or events
+beyond Hexa Lite’s reasonable control. 
 
-The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.
+### 7.2 This Section 7 shall apply whether or not Hexa Lite has been advised of or should
+have been aware of the possibility of any such losses arising.
 
-## Disputes Resolution
+## 8. INDEMNIFICATION
+The user agrees to indemnify, defend and hold Hexa Lite, its subsidiaries, affiliates,
+partners, officers, directors, agents, contractors, licensors, service providers,
+subcontractors, suppliers, interns and employees, harmless from any claim or demand,
+including attorneys’ fees, made by any third party due to or arising out of user’s breach of
+these Terms, user’s access or use of the Platform, or user’s violation of any law or the
+rights of a third party.
 
-If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.
+## 9. SEVERITY
+In the event that any provision of these Terms is determined to be unlawful, void or
+unenforceable, such a provision shall nonetheless be enforceable to the fullest extent
+permitted by the applicable law, and the unenforceable portion shall be deemed to be
+severed from these Terms. The validity and enforceability of the remaining provisions shall
+not be affected as a result.
 
-## For European Union (EU) Users
+## 10. GOVERNING LAW AND DISPUTES
 
-If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which you are resident in.
+### 10.1 Governing law.
+These Terms shall be governed and construed in accordance with the laws of
+Switzerland, without regard to its conflicts of law provisions.
 
-## United States Legal Compliance
+### 10.2 Jurisdiction. Any disputes arising out of or relating to these Terms shall be resolved
+by means of binding arbitration, rather than in court, unless the applicable law requires
+otherwise.
 
-You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a "terrorist supporting" country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.
+### 10.3 This Section 10 does not affect any statutory rights that the user is entitled to as a
+consumer.
 
-## Severability and Waiver
+## 11. MISCELLANEOUS
 
-### Severability
+### 11.1 Amendments.
+Hexa Lite reserves the right to modify these Terms at any time, effective upon posting of
+an updated version on the Platform. Such amendments may be necessary due to new
+features of the Platform, changes in the requirements of laws, regulations, or our business
+practices. The user is responsible for regularly reviewing these Terms. For material
+changes in the Terms, Hexa Lite will send the user a notice (if the user’s email address is
+available). User’s continued use of the Platform after any changes shall constitute user’s
+consent to such changes. Hexa Lite also reserves the right to modify the services
+provided through the Platform, availability of the Platform, equipment needed for access
+or use, materials available on the Platform, third-party services available on the Platform,
+and any other features of the Platform at any time.
 
-If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.
+### 11.2 Transfer of rights. The user is not allowed to assign user’s rights under these Terms.
+Hexa Lite is entitled to transfer our rights and obligations under these Terms entirely or
+partially to a third party. 
 
-### Waiver
+### 11.3 Entire agreement. These Terms, together with the documents referred to therein,
+represent the entire agreement between the user and Hexa Lite.
 
-Except as provided herein, the failure to exercise a right or to require performance of an obligation under these Terms shall not effect a party's ability to exercise such right or require such performance at any time thereafter nor shall the waiver of a breach constitute a waiver of any subsequent breach.
-
-## Translation Interpretation
-
-These Terms and Conditions may have been translated if We have made them available to You on our Service. You agree that the original English text shall prevail in the case of a dispute.
-
-## Changes to These Terms and Conditions
-
-We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is material We will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at Our sole discretion.
-
-By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms. If You do not agree to the new terms, in whole or in part, please stop using the website and the Service.
-
-## Contact Us
-
-If you have any questions about these Terms and Conditions, You can contact us:
-
-- By email: somecoolemail@domain.com
+## 12. CONTACT
+Any questions about these Terms should be sent to Hexa Lite by email at
+info@hexaonelabs.com.

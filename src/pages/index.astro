@@ -1,27 +1,16 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Header from '~/components/widgets/Header.astro';
-
-import Hero2 from '~/components/widgets/Hero2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Content from '~/components/widgets/Content.astro';
-import Testimonials from '~/components/widgets/Testimonials.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-
 import Button from '~/components/ui/Button.astro';
-import Image from '~/components/common/Image.astro';
-
-import { headerData } from '~/navigation';
 import Hero3 from '~/components/widgets/Hero3.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import PartnersList from '~/components/widgets/Partners.astro';
 import { getPermalink } from '~/utils/permalinks';
-
-const appStoreImg = '~/assets/images/app-store.png';
-const appStoreDownloadLink = 'https://github.com/onwidget/astrowind';
+import Accordion from '~/components/widgets/Accordion.astro';
+import Headline from '~/components/ui/Headline.astro';
 
 const appPreview = '~/assets/images/preview-app.png';
 const appDownloadLink =  getPermalink('/download');
@@ -30,10 +19,7 @@ const onBoardingImg = '~/assets/images/onboarding.png';
 const defiImg = '~/assets/images/coins-b.png';
 const swapImg = '~/assets/images/swap.svg';
 const liquidStakingImg = '~/assets/images/Liquid-Staking.svg';
-const multichainImg = '~/assets/images/multichain.png';
 
-const googlePlayImg = '~/assets/images/google-play.png';
-const googlePlayDownloadLink = 'https://github.com/onwidget/astrowind';
 
 const metadata = {
   title: 'Mobile App Homepage',
@@ -279,14 +265,14 @@ const metadata = {
   /> -->
 
   <!-- FAQs Widget ******************* -->
+  <section class="max-w-2xl mx-auto relative not-prose scroll-mt-[72px]">
+    <div class="relative mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default">
+    <Headline
+      title="Frequently Asked Questions" 
+      subtitle="Dive into the following questions to gain insights into the powerful features that we offers and how it can elevate your crypto investment journey." 
+      tagline="FAQs" />
 
-  <FAQs
-    id="faqs"
-    title="Frequently Asked Questions"
-    tagline='FAQS'
-    subtitle='Dive into the following questions to gain insights into the powerful features that we offers and how it can elevate your crypto investment journey.'
-    columns={1}
-    items={[
+    {[
       {
         title: "What is Hexa Lite?",
         description: "Hexa Lite allow you to create or connect existing digital wallets and provide solution to buy digital assets with fiats, exchange at best rate, lend and borrow money on blockchain with DeFi protocols.",
@@ -347,9 +333,67 @@ const metadata = {
         title: "Who is behind Hexa Lite?",
         description: "Hexa Lite is an open-source software developed by HexaOne Labs, a swiss based developpers organization that work on blockchain and DeFi technologies. You can learn more about HexaOne Labs here <a href='https://hexaonelabs.com' target='_blank'>https://hexaonelabs.com</a>.",
       }
-    ]}
-  />
-
+    ].map(e => (
+      <Accordion title={e.title} details={e.description} />
+    ))}
+    </div>
+  </section>
+  <script>
+    function accordionSetup() {
+      const accordionMenus = document.querySelectorAll(
+        ".accordion",
+      ) as NodeListOf<HTMLElement>;
+      accordionMenus.forEach((accordionMenu) => {
+        const accordionButton = accordionMenu.querySelector(
+          ".accordion__button",
+        ) as HTMLElement;
+        const accordionChevron = accordionMenu.querySelector(
+          ".accordion__chevron",
+        ) as HTMLElement;
+        const accordionContent = accordionMenu.querySelector(
+          ".accordion__content",
+        ) as HTMLElement;
+  
+        if (accordionButton && accordionContent && accordionChevron) {
+          accordionButton.addEventListener("click", (event) => {
+            if (!accordionMenu.classList.contains("active")) {
+              // if accordion is currently closed, so open it
+              accordionMenu.classList.add("active");
+              accordionButton.setAttribute("aria-expanded", "true");
+  
+              // set max-height to the height of the accordion content
+              // this makes it animate properly
+              accordionContent.classList.remove("hidden");
+              accordionContent.style.maxHeight =
+                accordionContent.scrollHeight + "px";
+              accordionChevron.classList.add("rotate-180");
+            } else {
+              // accordion is currently open, so close it
+              accordionMenu.classList.remove("active");
+              accordionButton.setAttribute("aria-expanded", "false");
+  
+              // set max-height to the height of the accordion content
+              // this makes it animate properly
+              accordionContent.style.maxHeight = "0px";
+              accordionChevron.classList.remove("rotate-180");
+              // delay to allow close animation
+              setTimeout(() => {
+                accordionContent.classList.add("hidden");
+              }, 300);
+            }
+            event.preventDefault();
+            return false;
+          });
+        }
+      });
+    }
+  
+    // runs on initial page load
+    accordionSetup();
+  
+    // runs on view transitions navigation
+    document.addEventListener("astro:after-swap", accordionSetup);
+  </script>
   <!-- BlogLatestPost Widget **************** -->
 
   <BlogLatestPosts
@@ -370,12 +414,8 @@ const metadata = {
     subtitle="Start your journey to financial freedom today."
   >
     <div slot="actions" class="flex max-w-sm gap-4">
-      <Button variant="link" href={appStoreDownloadLink}>
-        <Image src={appStoreImg} alt="App Store Image" width={200} />
-      </Button>
-
-      <Button variant="link" href={googlePlayDownloadLink}>
-        <Image src={googlePlayImg} alt="Google Play Image" width={200} />
+      <Button variant="primary" href={appDownloadLink}>
+        Download App
       </Button>
     </div>
   </CallToAction>
