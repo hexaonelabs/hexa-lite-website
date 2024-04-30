@@ -14,7 +14,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier -w .",
-    "lint:eslint": "eslint ."
+    "lint:eslint": "eslint .",
+    "predeploy:fb": "npm run build",
+    "deploy:fb": "firebase deploy --only hosting:hexa-lite"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.5",
