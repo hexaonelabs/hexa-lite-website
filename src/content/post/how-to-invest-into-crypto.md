@@ -9,7 +9,7 @@ tags:
   - tuto
   - Guid
 metadata:
-  canonical: https://hexa-lite.io/get-started-website-with-astro-tailwind-css
+  canonical: https://hexa-lite.io/articles/how-to-invest-into-crypto
 ---
 
 Cryptocurrency has taken the financial world by storm. With its decentralized nature and potential for high returns, it's no wonder that more and more people are looking to invest in this digital asset. If you're new to the world of cryptocurrency and are looking to get started with your investment journey, this guide is for you. We'll walk you through the basics of cryptocurrency investment, the different types of cryptocurrencies available, and the best practices for investing in this exciting new asset class.
