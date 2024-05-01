@@ -1,0 +1,33 @@
+---
+import Layout from '~/layouts/Layout.astro';
+
+const title = `Wallet - New version available on dedicated URL app.hexa-lite.io`;
+---
+
+<Layout metadata={{ title }}>
+  <section class="flex items-center h-full p-16">
+    <div class="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+      <div class="max-w-3xl text-center">
+        <h2 class="mb-8 font-bold text-7xl">
+          <span>New Version available</span><br/>
+          <span class="text-primary">
+            Update Now
+          </span>
+        </h2>
+        <p class="text-3xl font-semibold md:text-3xl">
+          New version available on dedicated URL <br/>
+          <a rel="noopener noreferrer" href='https://app.hexa-lite.io/' target="_blank">
+            app.hexa-lite.io
+          </a>
+        </p>
+        <p class="mt-4 mb-8 text-lg text-muted dark:text-slate-400">
+          Please uninstall existing App, go the new URL and install the latest version of the app. 
+          You can also update your bookmarks to the new URL if you have bookmarked the app.
+        </p>
+        <a rel="noopener noreferrer" href='https://app.hexa-lite.io/' target="_blank" class="btn ml-4">
+          Go to new URL
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
