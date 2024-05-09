@@ -21,6 +21,10 @@ export const headerData = {
           text: 'Increase Income with Liquid Staking',
           href: getPermalink('/#increase-income-with-liquid-staking'),
         },
+        // {
+        //   text: 'Buy Crypto with Fiat',
+        //   href: getPermalink('/#buy-crypto-with-fiat'),
+        // },
         {
           text: 'Open Source and Non-Custodial',
           href: getPermalink('/#open-source-and-non-custodial'),

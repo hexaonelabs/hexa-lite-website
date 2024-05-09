@@ -13,14 +13,14 @@ import Accordion from '~/components/widgets/Accordion.astro';
 import Headline from '~/components/ui/Headline.astro';
 
 const appPreview = '~/assets/images/preview-app.png';
-const appDownloadLink =  getPermalink('/download');
+const appDownloadLink = getPermalink('/download');
 const appLaunchLink = `https://app.hexa-lite.io`;
 
 const onBoardingImg = '~/assets/images/onboarding.png';
 const defiImg = '~/assets/images/coins-b.png';
 const swapImg = '~/assets/images/swap.svg';
 const liquidStakingImg = '~/assets/images/Liquid-Staking.svg';
-
+const buyWithFiatImg = '~/assets/images/fiat-crypto.png';
 
 const metadata = {
   title: 'Hexa Lite - Build your Wealth with Crypto Assets',
@@ -48,7 +48,8 @@ const metadata = {
       {
         text: 'Learn more',
         href: '#onboard-on-defi',
-      }]}
+      },
+    ]}
   >
     <Fragment slot="title">
       <span class="text-accent dark:text-white highlight">Build your Wealth</span>
@@ -89,7 +90,6 @@ const metadata = {
     }}
   />
 
-
   <!-- Content Widget **************** -->
 
   <Content
@@ -124,40 +124,40 @@ const metadata = {
   </Content>
 
   <Content
-  id="swap-between-1000-tokens"    
-  isReversed
-  items={[
-    {
-      description: `
+    id="swap-between-1000-tokens"
+    isReversed
+    items={[
+      {
+        description: `
       Hexa Lite provides a flexible and lightweight interface with seamless experience for swapping multiple tokens or bridging between Bitcoin, Solana and +20 EVM-Compatible blockchain such as Ethereum, Polygon, Binance Smart Chain, Optimism, Arbitrum. 
       Always ensure to get the best rates and lowest fees by aggregating data from multiple decentralized exchanges and liquidity pools.
       `,
-      icon: null,
-    },
-  ]}
-  image={{
-    src: swapImg,
-    alt: 'Swap between +1000 tokens at best rate and lowest fees',
-    class: 'swap__image fitContent',
-  }}
-  callToAction={{
-    text: 'Swap any Token',
-    href: appLaunchLink, //getPermalink('/swap-tokens'),
-    target: '_blank',
-  }}
-  classes={{
-    wrapperClass: 'shader__section',
-  }}
->
-  <Fragment slot="content">
-    <h3 class="underlinedColor text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-      Swap between +1000 tokens at best rate and lowest fees
-    </h3>
-  </Fragment>
-</Content>
+        icon: null,
+      },
+    ]}
+    image={{
+      src: swapImg,
+      alt: 'Swap between +1000 tokens at best rate and lowest fees',
+      class: 'swap__image fitContent',
+    }}
+    callToAction={{
+      text: 'Swap any Token',
+      href: appLaunchLink, //getPermalink('/swap-tokens'),
+      target: '_blank',
+    }}
+    classes={{
+      wrapperClass: 'shader__section',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="underlinedColor text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Swap between +1000 tokens at best rate and lowest fees
+      </h3>
+    </Fragment>
+  </Content>
 
   <Content
-    id="defi-loan-markets"  
+    id="defi-loan-markets"
     items={[
       {
         description:
@@ -187,7 +187,7 @@ const metadata = {
   </Content>
 
   <Content
-    id="increase-income-with-liquid-staking"  
+    id="increase-income-with-liquid-staking"
     isReversed
     items={[
       {
@@ -221,8 +221,42 @@ const metadata = {
     </Fragment>
   </Content>
 
+  <!-- <Content
+    id="buy-crypto-with-fiat"
+    items={[
+      {
+        description: `
+          Use a simple and secure way to buy digital assets with fiat money. 
+          Our platform offers a wide range of payment methods to ensure a seamless experience. 
+          Get started with a few clicks and start investing in the future of finance.
+        `,
+        icon: null,
+      },
+    ]}
+    image={{
+      src: buyWithFiatImg, //'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
+      alt: 'Buy Crypto with Fiat image',
+      class: 'buy_with_fiat__image m-auto',
+    }}
+    classes={{
+      wrapperClass: 'shader__section',
+    }}
+    callToAction={{
+      text: 'Buy Crypto with Fiat Money',
+      href: appLaunchLink,
+      target: '_blank',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="underlinedColor text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Buy Crypto with Fiat Money
+      </h3>
+    </Fragment>
+  </Content> -->
+
   <Content
-    id="open-source-and-non-custodial" 
+    id="open-source-and-non-custodial"
+    
     items={[
       {
         description: `
@@ -254,10 +288,11 @@ const metadata = {
   </Content>
 
   <!-- Content Partners  ************* -->
-  <PartnersList 
+  <PartnersList
     id="partners"
     title="Partnerships & Integrations"
-    subtitle='Hexa Lite developper core team believe in the power of collaboration to drive innovation and create exceptional experiences' />
+    subtitle="Hexa Lite developper core team believe in the power of collaboration to drive innovation and create exceptional experiences"
+  />
 
   <!-- Stats Widget ****************** -->
 
@@ -273,118 +308,125 @@ const metadata = {
   <!-- FAQs Widget ******************* -->
   <section class="max-w-2xl mx-auto relative not-prose scroll-mt-[72px]">
     <div class="relative mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-16 lg:py-20 text-default">
-    <Headline
-      title="Frequently Asked Questions" 
-      subtitle="Dive into the following questions to gain insights into the powerful features that we offers and how it can elevate your crypto investment journey." 
-      tagline="FAQs" />
+      <Headline
+        title="Frequently Asked Questions"
+        subtitle="Dive into the following questions to gain insights into the powerful features that we offers and how it can elevate your crypto investment journey."
+        tagline="FAQs"
+      />
 
-    {[
       {
-        title: "What is Hexa Lite?",
-        description: "Hexa Lite allow you to create or connect existing digital wallets and provide solution to buy digital assets with fiats, exchange at best rate, lend and borrow money on blockchain with DeFi protocols.",
-      },
-      {
-        title: "What is a digital wallet?",
-        description: "A digital wallet is a wallet that allows you to interact with digital assets like cryptocurrencies across DeFi protocols.",
-      },
-      {
-        title: "What is DeFi?",
-        description: "DeFi is an abbreviation of the phrase decentralized finance which generally refers to the digital assets and financial smart contracts, protocols, and decentralized applications built on chain.",
-      },
-      {
-        title: "What is a DeFi protocol?",
-        description: "A DeFi protocol is a smart contract or a set of smart contracts that can interact with each other to perform a set of actions.",
-      },
-      {
-        title: "What is a smart contract?",
-        description: "A smart contract is a computer program or a transaction protocol that is intended to automatically execute, control, or document legally relevant events and actions according to the terms of a contract or an agreement.",
-      },
-      {
-        title: "Why should I use DeFi?",
-        description: "DeFi is a permissionless and censorship resistant financial system that is available to anyone with an internet connection. It is a financial system that is built on the blockchain and is not controlled by any central authority.",
-      },
-      {
-        title: "Why should I use Hexa Lite?",
-        description: "Hexa Lite allow you to onboard to DeFi in a few click to earn interest on your assets, borrow money, exchange at best rate and more wihout any technical knowledge from blockchain or finance world and without any restriction or censorship.",
-      },
-      {
-        title: "Can I export my private key from a wallet created with Hexa Lite?",
-        description: "Of course! Wallets on Hexa Lite are created through Magic, which enables you to export your private key at any time. You can retrieve it her <a href='https://magic.link/' target='_blank'>https://magic.link/</a>.",
-      },
-      {
-        title: "Can I deposit FIAT money (USD, EUR, CHF) to Hexa Lite?",
-        description: "No. You cannot deposit and keep fiat at Hexa Lite because Hexa Lite is not a bank and does not provide any banking services. However, you can buy digital assets with FIAT money from our partners.",
-      },
-      {
-        title: "Can I deposit digital assets to Hexa Lite?",
-        description: "No. Hexa Lite is not a custodian wallet and does not provide any custodian services. Hexa Lite only provides a interface to interact with DeFi protocols and your wallet from the blockchain.",
-      },
-      {
-        title: "Can I use my wallet created with Hexa Lite on other platforms?",
-        description: "Yes. When you create a wallet with Hexa Lite, you are creating a wallet on the blockchain. You can use this wallet on any other platform that supports the same blockchain.",
-      },
-      {
-        title: "Which networks are supported?",
-        description: "Hexa Lite currently supports all majors EVM network, Solana and Bitcoin. You can get your wallet address for each networks by clicking on the authenticate badge on the top right corner of the screen.",
-      },
-      {
-        title: "What are the fees for swapping?",
-        description: "Hexa Lite charge 1% fees for swapping. However, the protocols that we integrate with may charge a fee for swapping and on-chain gas fees are applicable according to each network. That's why you have to get some ETH to pay for gas fees on Ethereum network and majors EVM network.",
-      },
-      {
-        title: "How pay on-chain transaction fees?",
-        description: "On-chain transactions fees are paid in the native currency of the network. For example, on Ethereum network, you have to pay gas fees in ETH. On Solana network, you have to pay gas fees in SOL. On Bitcoin network, you have to pay gas fees in BTC. Keep in mind that you have to get some native token to pay for gas fees on each network that you use. <br/>By default, Hexa Lite set network to Optimism which is a layer 2 solution on Ethereum network that use ETH to pay fees. You can change network by clicking on the authenticate badge on the top right corner of the screen.",
-      },
-      {
-        title: "Who is behind Hexa Lite?",
-        description: "Hexa Lite is an open-source software developed by HexaOne Labs, a swiss based developpers organization that work on blockchain and DeFi technologies. You can learn more about HexaOne Labs here <a href='https://hexaonelabs.com' target='_blank'>https://hexaonelabs.com</a>.",
+        [
+          {
+            title: 'What is Hexa Lite?',
+            description:
+              'Hexa Lite allow you to create or connect existing digital wallets and provide solution to buy digital assets with fiats, exchange at best rate, lend and borrow money on blockchain with DeFi protocols.',
+          },
+          {
+            title: 'What is a digital wallet?',
+            description:
+              'A digital wallet is a wallet that allows you to interact with digital assets like cryptocurrencies across DeFi protocols.',
+          },
+          {
+            title: 'What is DeFi?',
+            description:
+              'DeFi is an abbreviation of the phrase decentralized finance which generally refers to the digital assets and financial smart contracts, protocols, and decentralized applications built on chain.',
+          },
+          {
+            title: 'What is a DeFi protocol?',
+            description:
+              'A DeFi protocol is a smart contract or a set of smart contracts that can interact with each other to perform a set of actions.',
+          },
+          {
+            title: 'What is a smart contract?',
+            description:
+              'A smart contract is a computer program or a transaction protocol that is intended to automatically execute, control, or document legally relevant events and actions according to the terms of a contract or an agreement.',
+          },
+          {
+            title: 'Why should I use DeFi?',
+            description:
+              'DeFi is a permissionless and censorship resistant financial system that is available to anyone with an internet connection. It is a financial system that is built on the blockchain and is not controlled by any central authority.',
+          },
+          {
+            title: 'Why should I use Hexa Lite?',
+            description:
+              'Hexa Lite allow you to onboard to DeFi in a few click to earn interest on your assets, borrow money, exchange at best rate and more wihout any technical knowledge from blockchain or finance world and without any restriction or censorship.',
+          },
+          {
+            title: 'Can I export my private key from a wallet created with Hexa Lite?',
+            description:
+              "Of course! Wallets on Hexa Lite are created through Magic, which enables you to export your private key at any time. You can retrieve it her <a href='https://magic.link/' target='_blank'>https://magic.link/</a>.",
+          },
+          {
+            title: 'Can I deposit FIAT money (USD, EUR, CHF) to Hexa Lite?',
+            description:
+              'No. You cannot deposit and keep fiat at Hexa Lite because Hexa Lite is not a bank and does not provide any banking services. However, you can buy digital assets with FIAT money from our partners.',
+          },
+          {
+            title: 'Can I deposit digital assets to Hexa Lite?',
+            description:
+              'No. Hexa Lite is not a custodian wallet and does not provide any custodian services. Hexa Lite only provides a interface to interact with DeFi protocols and your wallet from the blockchain.',
+          },
+          {
+            title: 'Can I use my wallet created with Hexa Lite on other platforms?',
+            description:
+              'Yes. When you create a wallet with Hexa Lite, you are creating a wallet on the blockchain. You can use this wallet on any other platform that supports the same blockchain.',
+          },
+          {
+            title: 'Which networks are supported?',
+            description:
+              'Hexa Lite currently supports all majors EVM network, Solana and Bitcoin. You can get your wallet address for each networks by clicking on the authenticate badge on the top right corner of the screen.',
+          },
+          {
+            title: 'What are the fees for swapping?',
+            description:
+              "Hexa Lite charge 1% fees for swapping. However, the protocols that we integrate with may charge a fee for swapping and on-chain gas fees are applicable according to each network. That's why you have to get some ETH to pay for gas fees on Ethereum network and majors EVM network.",
+          },
+          {
+            title: 'How pay on-chain transaction fees?',
+            description:
+              'On-chain transactions fees are paid in the native currency of the network. For example, on Ethereum network, you have to pay gas fees in ETH. On Solana network, you have to pay gas fees in SOL. On Bitcoin network, you have to pay gas fees in BTC. Keep in mind that you have to get some native token to pay for gas fees on each network that you use. <br/>By default, Hexa Lite set network to Optimism which is a layer 2 solution on Ethereum network that use ETH to pay fees. You can change network by clicking on the authenticate badge on the top right corner of the screen.',
+          },
+          {
+            title: 'Who is behind Hexa Lite?',
+            description:
+              "Hexa Lite is an open-source software developed by HexaOne Labs, a swiss based developpers organization that work on blockchain and DeFi technologies. You can learn more about HexaOne Labs here <a href='https://hexaonelabs.com' target='_blank'>https://hexaonelabs.com</a>.",
+          },
+        ].map((e) => <Accordion title={e.title} details={e.description} />)
       }
-    ].map(e => (
-      <Accordion title={e.title} details={e.description} />
-    ))}
     </div>
   </section>
   <script>
     function accordionSetup() {
-      const accordionMenus = document.querySelectorAll(
-        ".accordion",
-      ) as NodeListOf<HTMLElement>;
+      const accordionMenus = document.querySelectorAll('.accordion') as NodeListOf<HTMLElement>;
       accordionMenus.forEach((accordionMenu) => {
-        const accordionButton = accordionMenu.querySelector(
-          ".accordion__button",
-        ) as HTMLElement;
-        const accordionChevron = accordionMenu.querySelector(
-          ".accordion__chevron",
-        ) as HTMLElement;
-        const accordionContent = accordionMenu.querySelector(
-          ".accordion__content",
-        ) as HTMLElement;
-  
+        const accordionButton = accordionMenu.querySelector('.accordion__button') as HTMLElement;
+        const accordionChevron = accordionMenu.querySelector('.accordion__chevron') as HTMLElement;
+        const accordionContent = accordionMenu.querySelector('.accordion__content') as HTMLElement;
+
         if (accordionButton && accordionContent && accordionChevron) {
-          accordionButton.addEventListener("click", (event) => {
-            if (!accordionMenu.classList.contains("active")) {
+          accordionButton.addEventListener('click', (event) => {
+            if (!accordionMenu.classList.contains('active')) {
               // if accordion is currently closed, so open it
-              accordionMenu.classList.add("active");
-              accordionButton.setAttribute("aria-expanded", "true");
-  
+              accordionMenu.classList.add('active');
+              accordionButton.setAttribute('aria-expanded', 'true');
+
               // set max-height to the height of the accordion content
               // this makes it animate properly
-              accordionContent.classList.remove("hidden");
-              accordionContent.style.maxHeight =
-                accordionContent.scrollHeight + "px";
-              accordionChevron.classList.add("rotate-180");
+              accordionContent.classList.remove('hidden');
+              accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+              accordionChevron.classList.add('rotate-180');
             } else {
               // accordion is currently open, so close it
-              accordionMenu.classList.remove("active");
-              accordionButton.setAttribute("aria-expanded", "false");
-  
+              accordionMenu.classList.remove('active');
+              accordionButton.setAttribute('aria-expanded', 'false');
+
               // set max-height to the height of the accordion content
               // this makes it animate properly
-              accordionContent.style.maxHeight = "0px";
-              accordionChevron.classList.remove("rotate-180");
+              accordionContent.style.maxHeight = '0px';
+              accordionChevron.classList.remove('rotate-180');
               // delay to allow close animation
               setTimeout(() => {
-                accordionContent.classList.add("hidden");
+                accordionContent.classList.add('hidden');
               }, 300);
             }
             event.preventDefault();
@@ -393,12 +435,12 @@ const metadata = {
         }
       });
     }
-  
+
     // runs on initial page load
     accordionSetup();
-  
+
     // runs on view transitions navigation
-    document.addEventListener("astro:after-swap", accordionSetup);
+    document.addEventListener('astro:after-swap', accordionSetup);
   </script>
   <!-- BlogLatestPost Widget **************** -->
 
@@ -406,7 +448,6 @@ const metadata = {
     id="blog"
     title="Explore Latest Articles"
     information={`We're building an open financial system for everyone. Discover the latest news, updates, and insights to stay informed on your crypto journey.`}
-
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg__shader"></div>
@@ -414,15 +455,9 @@ const metadata = {
   </BlogLatestPosts>
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    id="download"
-    title="Install Hexa Lite now!"
-    subtitle="Start your journey to financial freedom today."
-  >
+  <CallToAction id="download" title="Install Hexa Lite now!" subtitle="Start your journey to financial freedom today.">
     <div slot="actions" class="flex max-w-sm gap-4">
-      <Button variant="primary" href={appDownloadLink}>
-        Download App
-      </Button>
+      <Button variant="primary" href={appDownloadLink}> Download App </Button>
     </div>
   </CallToAction>
 </Layout>
