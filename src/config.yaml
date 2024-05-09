@@ -11,7 +11,7 @@ metadata:
   title:
     default: Hexa Lite
     template: '%s — Hexa Lite'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "Start inversting now with a simple App that allow you to buy Crypto and earn interest."
   robots:
     index: true
     follow: true
@@ -38,7 +38,7 @@ apps:
 
     post:
       isEnabled: true
-      permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
+      permalink: 'articles/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
       robots:
         index: true
 
