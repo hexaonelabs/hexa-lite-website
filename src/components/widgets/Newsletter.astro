@@ -1,0 +1,165 @@
+---
+import { Icon } from 'astro-icon/components';
+import Button from '../ui/Button.astro';
+import Headline from '../ui/Headline.astro';
+import WidgetWrapper from '../ui/WidgetWrapper.astro';
+
+const {
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props;
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-6xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+
+  <div
+    class="text-black mx-auto flex flex-col md:flex-row-reverse gap-6 md:w-11/12 bg-white md:p-5 rounded md:rounded-3xl md:animate-fade-in"
+  >
+    <div class="image md:flex-1 animate-up-to-down md:animate-none rounded md:rounded-3xl"></div>
+    <div
+      class="flex flex-col md:flex-1 gap-4 w-11/12 mx-auto font-robotoRegular md:p-4 md:justify-center animate-down-to-up md:animate-none"
+    >
+      <h2 class="text-[43px] leading-9 font-bold">Learn How to Start with Crypto assets!</h2>
+      <p>Get your Guide to start with cryptocurrencies and learn how:</p>
+      <ul class="flex flex-col gap-3">
+        <li class="flex place-items-start gap-3">
+          <div class="rounded-full bg-primary mt-1">
+            <Icon name={'tabler:check'} class="w-5 h-5 font-bold p-1 text-white" />
+          </div>
+          Buy cryptocurrencies for the first time
+        </li>
+        <li class="flex place-items-start gap-3">
+          <div class="rounded-full bg-primary mt-1">
+            <Icon name={'tabler:check'} class="w-5 h-5 font-bold p-1 text-white" />
+          </div>
+          Build a solid investment portfolio
+        </li>
+        <li class="flex place-items-start gap-3">
+          <div class="rounded-full bg-primary mt-1">
+            <Icon name={'tabler:check'} class="w-5 h-5 font-bold p-1 text-white" />
+          </div>
+          Prevent from market volatility
+        </li>
+        <li class="flex place-items-start gap-3">
+          <div class="rounded-full bg-primary mt-1">
+            <Icon name={'tabler:check'} class="w-5 h-5 font-bold p-1 text-white" />
+          </div>
+          Earn passive income with your assets
+        </li>
+      </ul>
+      <form method="post" action="https://newsletter.infomaniak.com/external/submit"  class="flex flex-col gap-3 pb-8 md:pb-2" target="_blank">
+        <input type="email" name="email" style="display:none" /><input
+          type="hidden"
+          name="key"
+          value="eyJpdiI6InE1amp4aHMzZitMS0pxM1U4ajMwYm8xV0VFblRGRmVTUW1RK0xaVitGclE9IiwidmFsdWUiOiJnSHR5QjYzXC9UcFpob1ZBYzVsSTJYK1JhQUVDRGVlYlwvM293d3I5djBvZWc9IiwibWFjIjoiN2Q1MjlhMmJlODQ5OTg1NTI1OWIxNzRjMGU5ZGVjYTA0MTc2NmI3YzgyZTlhYjljNTcwY2I5ZmI5MTBhNmEzYSJ9"
+        /><input type="hidden" name="webform_id" value="17213" />
+      
+        <div class="inf-main_f0ba46d49fb8aaa73c357600ce574db8">
+          <div class="inf-content">
+            <label class="flex flex-col gap-2" for="email">
+              <span class="text-sm font-robotoBold tracking-wider flex justify-between"
+                ><small>Email address</small>
+                <small id="error-email" class="text-tomato h-0 overflow-hidden transition-all">Valid email required</small>
+              </span>
+              <input
+                class="transition outline-none py-4 px-5 border rounded-lg focus:border-dark-slate-grey"
+                type="text"
+                name="inf[1]"
+                data-inf-meta="1"
+                data-inf-error="Merci de renseigner une adresse email"
+                required="required"
+                placeholder="Email"
+              />
+            </label>
+            <Button 
+              id="btn-success" 
+              text="Get my Guide Now" 
+              type='submit' 
+              class="mt-6 bg-primary text-white dark:text-white" />
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</WidgetWrapper>
+<style>
+  .image {
+    background-image: url('~/assets/images/guide-start-crypto-inversment.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 282px;
+  }
+  @media (min-width: 768px) {
+    .image {
+      height: auto;
+    }
+  }
+  .success {
+    margin: 0 auto;
+    /* animation: success 0.2s forwards !important; */
+  }
+  /* @keyframes success {
+    0% {
+      width: 90%;
+    }
+    100% {
+      width: 60px;
+      height: 60px;
+      overflow: hidden;
+      color: transparent;
+      border-radius: 50%;
+
+      border: 1px solid hsl(4, 100%, 67%);
+      background-color: hsl(4, 100%, 67%);
+      background-image: url('../assets/images/icon-list.svg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  } */
+</style>
+
+<script>
+  function validateEmail(email) {
+    const regex = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
+    return regex.test(email);
+  }
+  const form = document.getElementById('form-suscribe');
+  console.log('>>>', form);
+  if (!form) throw new Error('HTML element not found');
+  const input = form.querySelector('input');
+  if (!input) throw new Error('HTML element not found');
+  const errorEmail = document.getElementById('error-email');
+  if (!errorEmail) throw new Error('HTML element not found');
+
+  // form.addEventListener('submit', (e) => {
+  //   e.preventDefault();
+  //   const value = input.value;
+  //   /* Esta vació o es un email incorrecto */
+  //   if (!value || !validateEmail(value)) {
+  //     /* estilos al input */
+  //     input.classList.add('border-success', 'text-success', 'bg-gradient-rose-opacity');
+  //     errorEmail.classList.add('h-4');
+  //     /* Si esta todo ok */
+  //   } else {
+  //     localStorage.setItem('subscribe', JSON.stringify(true));
+  //     localStorage.setItem('email-subscribe', value);
+
+  //     input.classList.add('success');
+  //     /* Simula la carga a una base de datos */
+  //     // setTimeout(() => {
+  //     //   window.location.href = `/success`;
+  //     // }, 350);
+  //   }
+  // });
+  
+  /* Reinica los errores */
+  input.addEventListener('focus', (e) => {
+    input.classList.remove('border-tomato', 'text-tomato', 'bg-gradient-rose-opacity');
+    errorEmail.classList.remove('h-4');
+  });
+</script>
