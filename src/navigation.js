@@ -76,19 +76,19 @@ export const footerData = {
       links: [
         { text: 'About the Team', href: getPermalink('/team') },
         { text: 'Blog', href: getBlogPermalink() },
-        { text: 'Snapshot', href: 'https://snapshot.org/#/hexaonelabs.eth', target: '_blank' },
-        { text: 'HexaOne Labs', href: 'https://hexaonelabs.com', target: '_blank' },
+        { text: 'Snapshot', href: 'https://snapshot.org/#/hexaonelabs.eth', target: '_blank', rel: 'noopener' },
+        { text: 'HexaOne Labs', href: 'https://hexaonelabs.com', target: '_blank', rel: 'noopener' },
       ],
     },
   ],
   secondaryLinks: [
-    { text: 'Terms & Privacy Policy', href: getPermalink('/terms') },
+    { text: 'Terms & Privacy Policy', href: getPermalink('/terms'), target: '_blank', rel: 'noopener' },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://twitter.com/hexa_one_labs', target: '_blank' },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/hexaonelabs', target: '_blank' }
+    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://twitter.com/hexa_one_labs', target: '_blank', rel: 'noopener' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/hexaonelabs', target: '_blank', rel: 'noopener' },
   ],
   footNote: `
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://hexaonelabs.com/"> HexaOne Labs</a>.
+    Made by <a class="text-blue-600 underline dark:text-muted" href="https://hexaonelabs.com/" rel="noopener"> HexaOne Labs</a>.
   `,
 };

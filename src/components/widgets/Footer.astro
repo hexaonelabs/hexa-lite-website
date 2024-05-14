@@ -8,6 +8,8 @@ interface Link {
   href?: string;
   ariaLabel?: string;
   icon?: string;
+  target?: string;
+  rel?: string;
 }
 
 interface Links {
@@ -36,12 +38,14 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
         </div>
         <div class="text-sm text-muted flex gap-1">
           {
-            secondaryLinks.map(({ text, href }, index) => (
+            secondaryLinks.map(({ text, href, target, rel }, index) => (
               <>
               {index !== 0 ? ' · ' : ''}
               <a
                 class="text-muted hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out"
                 href={href}
+                target={target}
+                rel={rel}
                 set:html={text}
               />
               </>
@@ -55,12 +59,14 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
             <div class="dark:text-gray-300 font-medium mb-2">{title}</div>
             {links && Array.isArray(links) && links.length > 0 && (
               <ul class="text-sm">
-                {links.map(({ text, href, ariaLabel }) => (
+                {links.map(({ text, href, ariaLabel, target, rel }) => (
                   <li class="mb-2">
                     <a
                       class="text-muted hover:text-gray-700 hover:underline dark:text-gray-400 transition duration-150 ease-in-out"
                       href={href}
                       aria-label={ariaLabel}
+                      target={target}
+                      rel={rel}
                     >
                       <Fragment set:html={text} />
                     </a>
@@ -76,11 +82,13 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
       {
         socialLinks?.length ? (
           <ul class="flex mb-4 md:order-1 -ml-2 md:ml-4 md:mb-0 rtl:ml-0 rtl:-mr-2 rtl:md:ml-0 rtl:md:mr-4">
-            {socialLinks.map(({ ariaLabel, href, text, icon }) => (
+            {socialLinks.map(({ ariaLabel, href, text, icon, target, rel }) => (
               <li>
                 <a
                   class="text-muted dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 inline-flex items-center"
                   aria-label={ariaLabel}
+                  target={target}
+                  rel={rel}
                   href={href}
                 >
                   {icon && <Icon name={icon} class="w-5 h-5" />}
