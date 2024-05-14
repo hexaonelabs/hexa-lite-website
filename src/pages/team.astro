@@ -147,7 +147,7 @@ const totalContributions = contributors.reduce(
             <p class="text-sm text-gray-600 dark:text-gray-200">{t.post}</p>
             <div class="flex justify-center mt-4">
               {t.links.map((l) => (
-                <a href={l.url} class="text-gray-600 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white mx-2 w-6">
+                <a href={l.url} target="_blank" rel="noopener" class="text-gray-600 dark:text-gray-200 hover:text-gray-900 dark:hover:text-white mx-2 w-6">
                   {/* <Image src={l.icon} alt={l.icon}  /> */}
                   <Icon name={l.icon} class="w-5 h-5" />
                 </a>
