@@ -1,0 +1,67 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+
+const installImg = '~/assets/images/install-cross-platform.svg';
+const metadata = {
+  title: 'Get Started with Hexa Lite',
+  description: 'New to crypto? Hexa Lite is your gateway to Web3. Create an account in under a minute and join the Web3 ecosystem.',
+};
+---
+
+<Layout metadata={metadata}>
+
+  <Hero
+    tagline="Start investing now"
+    actions={[
+      {
+        text: 'Step by Step Guide',
+        href: '#setp-by-step-guide',
+        variant: 'primary',
+      },
+    
+    ]}
+  >
+    <Fragment slot="title">
+      Get Started with Hexa Lite
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      New to crypto? Hexa Lite is your gateway to Web3. <br/>Create an account in under a minute and join the Web3 ecosystem.
+    </Fragment>
+  </Hero>
+
+  <Steps2
+    id="setp-by-step-guide"
+    tagline='Get Started'
+    title="Step by Step Guide"
+    subtitle=`
+      Follow these steps to install the app on your device and start investing in crypto and make your first investment.
+    `
+    items={[
+      {
+        title: 'Download & Install the app',
+        description: `
+          Checkout <a href="https://app.hexa-lite.io" target="_blank">https://app.hexa-lite.io</a> to install the app on your device.
+        `,
+      },
+      {
+        title: 'Connect & Create Wallet',
+        description: `
+          Connect to the app using your email or social account and create a wallet to start investing in crypto.
+        `},
+      {
+        title: 'Funds your account',
+        description: `
+          Add funds to your account using your bank account or credit card. You can also transfer funds from an existing wallet.
+        `},
+      {
+        title: 'Build your portfolio',
+        description: `
+          Start investing in your favorite crypto assets and build your portfolio. 
+          You can also track your investments and monitor your portfolio performance.
+        `},
+    ]}
+  />
+</Layout>
