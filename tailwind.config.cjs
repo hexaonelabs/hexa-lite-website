@@ -17,6 +17,15 @@ module.exports = {
         serif: ['var(--aw-font-serif, ui-serif)', ...defaultTheme.fontFamily.serif],
         heading: ['var(--aw-font-heading, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
       },
+      animation: {
+        fadeIn: "fadeIn 350ms ease-in-out forwards"
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0},
+          "100%": { opacity: 1}
+        }
+      }
     },
   },
   plugins: [typographyPlugin],

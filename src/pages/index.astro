@@ -98,7 +98,7 @@ const metadata = {
       {
         icon: null,
         description:
-          'Get started seamlessly! Connect or create an account in less than a minute. Whether through social login, email, or your existing wallet, our platform ensures a smooth onboarding experience. Take control of your financial path with ease.',
+          'Get started seamlessly! Connect or create <b>an account in less than a minute</b>. Whether through social login, email, or your existing wallet, our platform ensures a smooth onboarding experience. Take control of your financial path with ease.',
       },
     ]}
     image={{
@@ -130,7 +130,7 @@ const metadata = {
       {
         description: `
       Hexa Lite provides a flexible and lightweight interface with seamless experience for swapping multiple tokens or bridging between Bitcoin, Solana and +20 EVM-Compatible blockchain such as Ethereum, Polygon, Binance Smart Chain, Optimism, Arbitrum. 
-      Always ensure to get the best rates and lowest fees by aggregating data from multiple decentralized exchanges and liquidity pools.
+      Always ensure to <b>get the best rates & lowest fees</b> by aggregating data from multiple decentralized exchanges and liquidity pools.
       `,
         icon: null,
       },
@@ -151,7 +151,7 @@ const metadata = {
   >
     <Fragment slot="content">
       <h3 class="underlinedColor text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Swap between +1000 tokens at best rate and lowest fees
+        Swap between +1000 tokens at best rate & lowest fees
       </h3>
     </Fragment>
   </Content>
@@ -161,7 +161,7 @@ const metadata = {
     items={[
       {
         description:
-          'Safely deposit your liquidity without any restrictions or censorship into DeFi protocols across more than 40 markets and 8 EVM-Compatible blockchains. Earn substantial interest while retaining complete control over your assets.',
+          'Safely deposit your liquidity without any restrictions or censorship into DeFi protocols across more than 40 markets and 8 EVM-Compatible blockchains. <b>Earn substantial interest</b> while retaining complete control over your assets.',
         icon: null,
       },
     ]}
@@ -192,7 +192,7 @@ const metadata = {
     items={[
       {
         description: `Unlock higher earnings without locking your assets! <br/>
-        Liquid Staking offers attractive interest rates on your crypto, keeping your funds accessible at all times. 
+        Liquid Staking offers <b>attractive interest rates on your crypto</b>, keeping your funds accessible at all times. 
         It's the perfect balance of liquidity and profitability. Now it's time to maximize your returns.
         Take advantage of the staking rewards without need to lock your assets for a specific period and keep your assets liquid 
         to use them at any time or to participate in other DeFi protocols.
@@ -261,7 +261,7 @@ const metadata = {
       {
         description: `
           Hexa Lite software don't store any private keys, seed phrases or sensitive data.
-          You retain complete control over your assets, enabling direct interaction with DeFi protocols without intermediaries smart contracts or third-party services. 
+          You retain <b>complete control over your assets</b>, enabling direct interaction with DeFi protocols without intermediaries smart contracts or third-party services. 
           Users can access the source code on GitHub to verify the software's integrity and security.
           `,
         icon: null,
@@ -461,3 +461,24 @@ const metadata = {
     </div>
   </CallToAction>
 </Layout>
+
+<script>
+  const callback = function (entries) {
+  entries.forEach((entry) => {
+    // console.log(entry);
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate-fadeIn");
+    } else {
+      entry.target.classList.remove("animate-fadeIn");
+    }
+  });
+};
+
+const observer = new IntersectionObserver(callback);
+
+const targets = document.querySelectorAll(".relative.max-w-4xl img");
+targets.forEach(function (target) {
+  target.classList.add("opacity-0");
+  observer.observe(target);
+});
+</script>
