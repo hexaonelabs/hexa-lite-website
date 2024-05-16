@@ -31,10 +31,10 @@ export const headerData = {
         }
       ],
     },
-    // {
-    //   text: 'Learn',
-    //   href: getPermalink('/learn'),
-    // },
+    {
+      text: 'Get Started',
+      href: getPermalink('/get-started'),
+    },
     {
       text: 'About the Team',
       href: getPermalink('/team'),
@@ -51,7 +51,10 @@ export const headerData = {
 
 export const footerData = {
   links: [
-    {},
+    {
+      title: '',
+      links: [],
+    },
     {
       title: 'Product',
       links: [
