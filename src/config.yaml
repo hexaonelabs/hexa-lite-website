@@ -11,7 +11,7 @@ metadata:
   title:
     default: Hexa Lite - Build your Wealth with Crypto Assets
     template: '%s — Hexa Lite'
-  description: "Start inversting now with a simple App that allow you to buy Crypto and earn interest."
+  description: "Start investing now with a simple App that allow you to buy Crypto and earn interest."
   robots:
     index: true
     follow: true
