@@ -2,11 +2,13 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Button from '~/components/ui/Button.astro';
 
-const installImg = '~/assets/images/install-cross-platform.svg';
+const appPreview = '~/assets/images/preview-multi-platforms-app.png';
 const metadata = {
   title: 'Get Started with Hexa Lite',
-  description: 'New to crypto? Hexa Lite is your gateway to Web3. Create an account in under a minute and join the Web3 ecosystem.',
+  description: 'Create a Wallet & Start Investing in Crypto Assets in Just a few Minutes',
 };
 ---
 
@@ -20,48 +22,68 @@ const metadata = {
         href: '#setp-by-step-guide',
         variant: 'primary',
       },
-    
     ]}
+    image={{
+      src: appPreview,
+      alt: 'Hexa Lite preview App',
+      class: 'm-auto object-contain filter-drop-shadow',
+    }}
   >
     <Fragment slot="title">
       Get Started with Hexa Lite
     </Fragment>
 
     <Fragment slot="subtitle">
-      New to crypto? Hexa Lite is your gateway to Web3. <br/>Create an account in under a minute and join the Web3 ecosystem.
+      Create a Wallet & Start Investing in Crypto Assets 
+      in Just a few Minutes
     </Fragment>
   </Hero>
 
   <Steps2
     id="setp-by-step-guide"
     tagline='Get Started'
-    title="Step by Step Guide"
+    title="What is Required to Create a Wallet?"
     subtitle=`
-      Follow these steps to install the app on your device and start investing in crypto and make your first investment.
+      You <b>don't need</b> any Personal Information, ID Document or Proof of Residence to create a Wallet.<br/><br/>
+      Just Follow these Steps to Install the App on your Device & Start Investing in Crypto to Build you Financial Journey.
     `
     items={[
       {
         title: 'Download & Install the app',
         description: `
-          Checkout <a href="https://app.hexa-lite.io" target="_blank">https://app.hexa-lite.io</a> to install the app on your device.
+          Checkout <b><a href="https://app.hexa-lite.io" target="_blank" class="text-primary">https://app.hexa-lite.io</a></b> to install the app on your device. Hexa Lite is only available from web browser to ensure your privacy and security.<br/><br/>
+          When you open the app on mobile device, you will be prompted to install the app on your device by adding to your home screen for easy access like native application.
         `,
       },
       {
         title: 'Connect & Create Wallet',
         description: `
-          Connect to the app using your email or social account and create a wallet to start investing in crypto.
+          Next step is to <b>Connect to the App using your Email or Social Account</b>. This will create or connect your existing Wallet. <br/><br/>
+          You are now ready to start investing in crypto without any central authority, intermediaries or restrictions.
         `},
       {
         title: 'Funds your account',
         description: `
-          Add funds to your account using your bank account or credit card. You can also transfer funds from an existing wallet.
+          After connecting in, you can add funds to your Wallet using a Bank Transfer or your Credit Card. 
+          This can easily be done by clicking on the "Buy Cryptocurrencies" button in the Deposit function. <br/><br/>
+          We recommend that you start building your portfolio by investing in Ethereum (ETH) which will be used to pay transaction fees on the network. 
+          You can also transfer funds from an existing Wallet to your Hexa Lite Wallet.
         `},
       {
         title: 'Build your portfolio',
         description: `
-          Start investing in your favorite crypto assets and build your portfolio. 
-          You can also track your investments and monitor your portfolio performance.
+          Once you have funds in your Wallet, you can start investing in a wide range of Cryptocurrencies available on the platform from the Exchange feature.<br/><br/>
+          Consider that you have different options to invest in such as Bitcoin (BTC), Ethereum (ETH), Chainlink (LINK) and many others, but you can also invest in Stablecoins like USDC, USDT or DAI to protect your investment from Market Volatility. <br/><br/>
+          You can also Stake some of your Assets or use the Lending Market to Earn Passive Income.
         `},
     ]}
   />
+
+    <!-- CallToAction Widget *********** -->
+
+    <CallToAction id="download" title="Install Hexa Lite now!" subtitle="Start your journey to financial freedom today.">
+      <div slot="actions" class="flex max-w-sm gap-4">
+        <Button variant="primary" href="https://app.hexa-lite.io"> Download App </Button>
+      </div>
+    </CallToAction>
 </Layout>

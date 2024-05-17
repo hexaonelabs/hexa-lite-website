@@ -169,6 +169,16 @@ import '@fontsource-variable/outfit';
     transform: scale(1.5) translateX(3rem);
     filter: drop-shadow(0px 0px 60px rgba(var(--aw-color-primary-rgb),0.2)) brightness(1.1) contrast(1.1);
   }
+  img.object-contain {
+    object-fit: contain!important;
+  }
+
+  img.filter-drop-shadow {
+    filter: drop-shadow(0px 0px 60px rgba(var(--aw-color-primary-rgb),0.2)) brightness(1.1) contrast(1.1)
+  }
+  .aw-link-active {
+    color: var(--aw-color-primary);
+  }
 
   @media screen and (max-width: 1023px) {
     img.app__preview {
