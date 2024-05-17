@@ -2,8 +2,10 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
+import Button from '~/components/ui/Button.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
-const installImg = '~/assets/images/install-cross-platform.svg';
+const installImg = '~/assets/images/preview-app.png';
 const metadata = {
   title: 'Download and Install Application',
   description: 'Download and install Hexa Lite on your device. Hexa Lite is a cross platform app that can be installed on any device without going through the app store.',
@@ -17,13 +19,12 @@ const metadata = {
     image={{
       src: installImg,
     alt: 'install cross platform app',
-    class: ' fitContent m-auto',
+    class: ' object-contain m-auto filter-drop-shadow',
     }}
     actions={[
       {
-        target: '_blank',
-        text: 'Launch Progressive Web App',
-        href: 'https://app.hexa-lite.io',
+        text: 'Install Guide',
+        href: '#install-guide',
         variant: 'primary',
       },
     
@@ -34,13 +35,13 @@ const metadata = {
     </Fragment>
 
     <Fragment slot="subtitle">
-      Due to the nature of the app, we have made it available on multiple platforms using the latest web technologies call PWA (Progressive Web App).
-      This means you can install the app on any device without going through the app store and still get the same experience as a native app.
-      This also means that the app is always up to date and you don't have to worry about updating the app.
+      Available on Multiple Platforms using the latest Web technologies.
+      <span class="md:block">Install the App on your Device without going through the App Store.</span>
     </Fragment>
   </Hero>
 
   <Steps2
+    id="install-guide"
     tagline='Mobile'
     title="Install Step by Step Guide"
     subtitle=`Follow the steps below to download and install Hexa Lite on your mobile device:`
@@ -48,24 +49,35 @@ const metadata = {
       {
         title: 'Visit distribution page',
         description: `
-          Checkout <a href="https://app.hexa-lite.io" target="_blank">https://app.hexa-lite.io</a> to install the app on your device.
+          Checkout <b><a href="https://app.hexa-lite.io" target="_blank" class="text-primary">https://app.hexa-lite.io</a></b> to install the app on your device. Hexa Lite is only available from web browser to ensure your privacy and security.<br/><br/>
+          When you open the app on mobile device, you will be prompted to install the app on your device by adding to your home screen for easy access like native application.
         `,
       },
       {
-        title: 'iOS Install the app',
+        title: 'Install the App on Your Device',
         description: `
-          Tap the share button at the bottom of the screen and then tap on "Add to Home Screen" to install the app on your device.
-        `},
-      {
-        title: 'Android Install the app',
-        description: `
-          Tap the three dots at the top right corner of the screen and then tap on "Add to Home Screen" to install the app on your device.
-        `},
-      {
-        title: 'Desktop Install the app',
-        description: `
+          Follow the instructions below to install the app on your device:<br/><br/>
+          <b>iPhone Install the app</b><br/>
+          Tap the share button at the bottom of the screen and then tap on "Add to Home Screen" to install the app on your device.<br/><br/>
+          <b>Android Install the app</b><br/>
+          Tap the three dots at the top right corner of the screen and then tap on "Add to Home Screen" to install the app on your device.<br/><br/>
+          <b>Desktop Install the app</b><br/>
           Click on the install button in the address bar (URL) to install the app on your device.
         `},
     ]}
+    callToAction={{
+      title: 'Install Hexa Lite now!',
+      text: 'Download Web App',
+      href: 'https://app.hexa-lite.io',
+      variant: 'primary',
+      target: '_blank',
+    }}
   />
+
+  <!-- CallToAction Widget *********** -->
+  <CallToAction id="download" title="Install Hexa Lite now!" subtitle="Start your journey to financial freedom today.">
+    <div slot="actions" class="flex max-w-sm gap-4">
+      <Button variant="primary" href="https://app.hexa-lite.io"> Download App </Button>
+    </div>
+  </CallToAction>
 </Layout>
