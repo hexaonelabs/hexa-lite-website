@@ -1,0 +1,90 @@
+---
+publishDate: 2024-06-04T00:00:00Z
+title: HexaOne Labs Milestone - Introducing Firebase Web3Connect Integration
+excerpt: HexaOne Labs is thrilled to announce a significant milestone in our journey towards enhancing the security, transparency, and decentralization of our platform.
+image: ~/assets/images/introducing-firebase-web3Connect-integration.png
+category: milestone
+tags:
+  - information
+  - integration
+  - milestone
+  - Guid
+metadata:
+  canonical: https://hexa-lite.io/articles/introducing-firebase-web3Connect-integration
+---
+
+HexaOne Labs is thrilled to announce a significant milestone in our journey towards enhancing the security, transparency, and decentralization of our platform. We are integrating <b>Firebase Web3Connect</b> as our new authentication provider, replacing Magic.link. This upgrade will support our goal of providing a fully 100% non-custodial, multi-chain wallet solution. This article will guide you through the reasons behind this change, the benefits of the new system, and the step-by-step process to migrate your wallet from Magic.link to Hexa Lite.
+
+## Why Firebase Web3Connect as Wallet provider?
+
+### Enhancing Transparency and Decentralization
+At HexaOne Labs, we are committed to upholding the core principles of blockchain technology: <b>transparency & decentralization</b>. [Firebase Web3Connect](https://web3connect.web.app) aligns with these principles by providing a robust, secure, and non-custodial authentication method. This means that users retain full control over their private keys and seed phrases, enhancing the overall security of their digital assets.
+
+### A Fully Non-Custodial Multi-Chain Wallet
+One of the key features of Firebase Web3Connect is its support for a <b>fully 100% non-custodial & multi-chain wallet</b>. This integration allows users to manage multiple cryptocurrencies across different blockchains networks within a single wallet interface. By eliminating the need for third-party custodians, we are ensuring that your assets remain under your control at all times.
+
+### Developed by HexaOne Labs Core Team
+The integration of Firebase Web3Connect has been developed in-house by our <b>dedicated core team at HexaOne Labs</b>. This ensures a seamless integration with our existing systems and guarantees that we can provide prompt support and updates. Our team's deep understanding of the platform enables us to optimize the performance and security of the new authentication system.
+
+## Migration Process from Magic.link to Firebase Web3Connect
+To ensure a smooth transition, we have outlined a step-by-step guide to help you migrate your wallet from Magic.link to the new Firebase Web3Connect system. It is crucial to follow these steps carefully to avoid any loss of access to your digital assets.
+
+### Step 1: Retrieve Your Wallet Secret Phrase from Magic.link
+- <b>Go to Magic Link Wallet:</b> Open your web browser and navigate to the <a href="https://magic.link/">Magic Link wallet</a> website.
+- <b>Connect to Your Wallet:</b> Use your existing credentials to log in to your Magic Link wallet.
+- <b>Click Your Avatar on Top Left of the Wallet Card:</b> Locate your avatar or profile picture on the top left corner of the wallet interface.
+- <b>Click on "Wallet Secret Phrase":</b> In the menu, find and click on the option labeled "Wallet secret phrase."
+- <b>Get Your Wallet Secret Phrase:</b> Carefully copy or write down your wallet's secret phrase. This phrase is crucial for accessing your wallet in the new system.
+
+### Step 2: Import Your Wallet Secret Phrase to Hexa Lite
+- <b>Connect Using <i>"Connect Wallet ➡ Import Secret Phrase"</i>:</b> Open the Hexa Lite application and navigate to the "Connect Wallet" option. Select "Import secret phrase" from the menu.
+- <b>Use Your Secret Phrase & Connect with Google:</b> Enter the secret phrase you retrieved from Magic.link and proceed to connect your wallet using your Google account.
+- <b>Backup Your Secret Seed Phrase:</b> Once connected, ensure you back up your secret seed phrase in a secure location. This is essential to ensure you never lose access to your wallet.
+
+<img src="~/assets/images/firebase-web3connect-icon.png" alt="Firebase Web3Connect Icon" class="img-center">
+
+## Benefits of Firebase Web3Connect Integration
+
+### Improved Security
+With Firebase Web3Connect, your private keys and seed phrases remain in your control. This non-custodial approach significantly reduces the risk of hacking and unauthorized access. By decentralizing authentication, we are enhancing the security of your digital assets.
+
+### Seamless Multi-Chain Support
+Managing multiple cryptocurrencies across different blockchains has never been easier. Firebase Web3Connect supports a wide range of blockchains, allowing you to handle all your digital assets within a single wallet interface. This simplifies the user experience and ensures greater flexibility.
+
+### User-Friendly Migration Process
+We understand that transitioning from one authentication provider to another can be challenging. That's why we have designed a straightforward migration process to help you transfer your wallet from Magic.link to Firebase Web3Connect. Our step-by-step guide ensures a smooth and hassle-free migration.
+
+### Enhanced User Experience
+Firebase Web3Connect offers a more intuitive and user-friendly interface, making it easier for both new and experienced users to manage their crypto assets. The integration with Google for authentication simplifies the login process while maintaining high security standards.
+
+## FAQs About the Migration
+### Why is HexaOne Labs replacing Magic.link with Firebase Web3Connect?
+We are committed to providing the highest level of security and user experience for our community. Firebase Web3Connect offers a more decentralized, transparent, and secure authentication method, aligning with our core values and long-term goals.
+
+### Is my digital asset safe during the migration process?
+Yes, your digital assets are safe. The migration process involves transferring your wallet's secret phrase from Magic.link to Hexa Lite. As long as you securely manage your secret phrase, your assets will remain protected.
+
+### What should I do if I encounter issues during the migration?
+If you face any issues during the migration process, please reach out to our support team. We are here to assist you and ensure a smooth transition to the new authentication system.
+
+### How long will the migration process take?
+The migration process is straightforward and should only take a few minutes. However, we recommend taking your time to carefully follow each step to ensure the security of your assets.
+
+### Can I still use Magic.link after the migration?
+Once you migrate to Firebase Web3Connect, we recommend using Hexa Lite for all future transactions and wallet management. This ensures you benefit from the enhanced security and features of the new system.
+
+## Leveraging Our Resources for a Smooth Transition
+To help you better understand crypto wallets and investments, we encourage you to explore our previous articles:
+
+- [What is a Crypto Wallet?](https://hexa-lite.io/articles/what-is-crypto-wallet)
+- [How to Invest into Crypto: A Beginner's Guide to Crypto Investment](https://hexa-lite.io/articles/how-to-invest-into-crypto/)
+
+These resources provide valuable insights into the basics of crypto wallets and investment strategies, ensuring you have the knowledge and tools to navigate the crypto landscape confidently.
+
+## Conclusion: Embracing the Future with Firebase Web3Connect
+
+The integration of [Firebase Web3Connect](https://web3connect.web.app/) marks a significant milestone for HexaOne Labs and our community. By enhancing transparency, security, and user experience, we are taking a major step forward in our commitment to providing a decentralized and non-custodial multi-chain wallet solution.
+
+We understand that change can be challenging, but we are confident that this upgrade will bring immense benefits to our users. By following the migration steps outlined in this article, you can seamlessly transition to the new system and continue to manage your digital assets securely.
+
+Thank you for being a part of the HexaOne Labs community. We look forward to your continued support as we embrace this exciting new chapter.
