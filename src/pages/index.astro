@@ -29,7 +29,19 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="announcement">
+    <div
+      class="dark text-center text-muted text-sm bg-black dark:bg-transparent dark:border-b dark:border-slate-800 dark:text-slate-400 hidden md:flex gap-1 overflow-hidden px-3 py-2 relative text-ellipsis whitespace-nowrap justify-center"
+    >
+      <span
+        class="dark:bg-slate-700 bg-white/40 dark:text-slate-300 font-semibold px-1 py-0.5 text-xs mr-0.5 rtl:mr-0 rtl:ml-0.5 inline-block"
+        >NEW Milestone</span
+      >
+      <a href="./articles/introducing-firebase-web3connect-integration" class="text-muted hover:underline dark:text-slate-400 font-medium"
+        >Firebase Web3Connect Integration Launch in July 24 🎉</a
+      >
+    </div>
+  </Fragment>
 
   <!-- Hero2 Widget ******************* -->
 
@@ -256,7 +268,6 @@ const metadata = {
 
   <Content
     id="open-source-and-non-custodial"
-    
     items={[
       {
         description: `
@@ -464,21 +475,21 @@ const metadata = {
 
 <script>
   const callback = function (entries) {
-  entries.forEach((entry) => {
-    // console.log(entry);
-    if (entry.isIntersecting) {
-      entry.target.classList.add("animate-fadeIn");
-    } else {
-      entry.target.classList.remove("animate-fadeIn");
-    }
+    entries.forEach((entry) => {
+      // console.log(entry);
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-fadeIn');
+      } else {
+        entry.target.classList.remove('animate-fadeIn');
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(callback);
+
+  const targets = document.querySelectorAll('.relative.max-w-4xl img');
+  targets.forEach(function (target) {
+    target.classList.add('opacity-0');
+    observer.observe(target);
   });
-};
-
-const observer = new IntersectionObserver(callback);
-
-const targets = document.querySelectorAll(".relative.max-w-4xl img");
-targets.forEach(function (target) {
-  target.classList.add("opacity-0");
-  observer.observe(target);
-});
 </script>
