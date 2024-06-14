@@ -71,16 +71,16 @@ Investment apps like Hexa Lite make it easy for beginners to start investing, es
 If you're unsure where to start, consider consulting a financial advisor. They can help tailor an investment strategy to your goals and risk tolerance.
 
 ## Common Investment Mistakes to Avoid
-# 1. Not Diversifying
+### 1. Not Diversifying
 Putting all your money in one type of investment can be risky. Diversify to protect your portfolio.
 
-# 2. Emotional Investing
+### 2. Emotional Investing
 Making investment decisions based on emotions can lead to poor outcomes. Stay disciplined and stick to your strategy.
 
-# 3. Ignoring Fees
+### 3. Ignoring Fees
 Investment fees can eat into your returns. Be aware of the costs associated with your investments.
 
-# 4. Overtrading
+### 4. Overtrading
 Frequent buying and selling can reduce your returns due to transaction fees and taxes. Focus on long-term growth.
 
 ## Investing in Cryptocurrencies
