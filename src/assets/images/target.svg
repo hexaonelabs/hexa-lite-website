@@ -1,0 +1,23 @@
+<svg width="600" height="560" viewBox="0 0 600 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <ellipse opacity="0.15" cx="314.8" cy="280" rx="245.2" ry="245" fill="rgba(0,145,255,0.554)" />
+  <ellipse opacity="0.2" cx="314.8" cy="282" rx="163.1" ry="162.9" fill="rgba(0,145,255,0.554)" />
+  <ellipse opacity="0.4" cx="314.8" cy="280" rx="77.2" ry="77.2" fill="rgba(0,145,255,0.554)" />
+  <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+    d="M 479.6 310.8 L 509.3 310.8 C 509.3 319.3 502.7 326.2 494.4 326.2 C 486.2 326.2 479.6 319.3 479.6 310.8 Z"
+    fill="#c4d7ff" />
+  <rect opacity="0.5" width="28.8" height="28.8" transform="matrix(0.7,0.7,-0.7,0.7,366.6,376.9)" fill="#ffffff" />
+  <rect opacity="0.2" width="12.9" height="12.9" transform="matrix(0.7,0.7,-0.7,0.7,107.4,430.8)" fill="#ffffff" />
+  <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+    d="M 303.3 500.2 L 287.8 500.2 C 287.8 508.7 294.7 515.6 303.3 515.6 L 303.3 500.2 Z" fill="#ffffff" />
+  <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+    d="M 367.2 66.4 H 356.1 C 356.1 60.3 361.1 55.4 367.2 55.4 V 66.4 Z" fill="#ffffff" />
+  <rect opacity="0.2" width="13.2" height="13.2" transform="matrix(-0.7,0.7,-0.7,-0.7,284.5,156.1)" fill="#ffffff" />
+  <rect opacity="0.2" width="13.2" height="13.2" transform="matrix(-0.7,0.7,-0.7,-0.7,557.7,109.9)" fill="#ffffff" />
+  <rect opacity="0.2" width="13.2" height="13.2" transform="matrix(-0.7,0.7,-0.7,-0.7,59.7,261.8)" fill="#ffffff" />
+  <path opacity="0.3" fill-rule="evenodd" clip-rule="evenodd"
+    d="M 112.6 202.9 L 112.6 238.2 C 131.5 238.2 146.8 222.4 146.8 202.9 L 112.6 202.9 Z" fill="#ffffff" />
+  <ellipse cx="463.6" cy="211.2" rx="14.9" ry="14.9" fill="#e7efff" />
+  <ellipse opacity="0.2" cx="526.4" cy="433.6" rx="9.4" ry="9.4" fill="#ffffff" />
+  <ellipse opacity="0.2" cx="162.8" cy="68.1" rx="7.2" ry="7.2" fill="#ffffff" />
+  <ellipse opacity="0.2" cx="187.6" cy="320.7" rx="12.1" ry="12.1" fill="#ffffff" />
+</svg>
