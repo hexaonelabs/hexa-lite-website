@@ -27,10 +27,10 @@ const whenExternalScripts = (items = []) =>
 export default defineConfig({
   output: 'static',
   
-  build: {
-    // Example: Generate `page.html` instead of `page/index.html` during build.
-    format: 'file'
-  },
+  // build: {
+  //   // Example: Generate `page.html` instead of `page/index.html` during build.
+  //   format: 'file'
+  // },
 
   integrations: [
     tailwind({
