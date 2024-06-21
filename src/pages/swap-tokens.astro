@@ -26,7 +26,13 @@ const swapBestFeesImg = '~/assets/images/swap-best-fees.png';
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero>
+  <Hero
+  actions={[
+    {
+      text: 'Learn more',
+      href: '#tired-paying-excessive-transaction-fees',
+    },
+  ]}>
     <Fragment slot="title">
       Swap any Tokens<br /> 
       <span class="text-accent text-5xl dark:text-white highlight">at best rate & lowest fees</span>
@@ -38,12 +44,24 @@ const swapBestFeesImg = '~/assets/images/swap-best-fees.png';
   </Hero>
 
   <Content
+    id="tired-paying-excessive-transaction-fees"
     items={[
       {
-        icon: null,
-        description: `With our solution you can choose from multiple On-Chain providers to get the best rate & lowest fees for your transactions 
-        without the need to provide your personal information or create an account on any centralized exchange.`,
+        title: `Don't pay excessive fees for swapping tokens`,
+        description: `Use decentralized exchange aggregator that use On-Chains providers to get the best rates & lowest fees for your transactions.`,
       },
+      {
+        title: `Swap without amount constraints`,
+        description: `
+          You can swap any amount of tokens you want, without any constraints or limitations. 
+        `
+      },
+      {
+        title: `Fast & Secure`,
+        description: `
+          We use On-Chain transactions to swap tokens directly from your wallet using decentralized protocols to ensure fast & secure transactions.
+        `
+      }
     ]}
     image={{
       src: swapBestFeesImg,
@@ -58,45 +76,76 @@ const swapBestFeesImg = '~/assets/images/swap-best-fees.png';
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         Tired of paying excessive transaction fees?
       </h3>
+      Centralized exchanges charge high fees for swapping tokens. 
+      With our solution you can choose from multiple On-Chain providers to get the best rate & lowest fees for your transactions.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
   <Content
+    isReversed
     items={[
       {
-        icon: null,
-        description: `We have a wide range of tokens available for you to swap. 
+        description: `
           You can swap any token you want, including the most exotic ones
-          that are not available on centralized exchanges because we source liquidity directly from the DeFi protocols providers
-          like Uniswap, Sushiswap, Balancer, Bancor, and many more to give you the best rates and lowest fees.`,
+          that are not available on centralized exchanges.`,
+        title: `Don't wait for exchanges to list your favorite tokens`,
+      },
+      {
+        description: `We source liquidity directly from the DeFi protocols providers
+          like Uniswap, Sushiswap, Balancer, Bancor and many more to give you the best rates and lowest fees.`,
+        title: 'Use liquidity from DeFi protocols',
+      },
+
+      {
+        description: `You don't need to use centralized exchanges or provide your personal information to swap tokens. 
+          We are a non-custodial solution that allows you to swap tokens directly from your wallet on the blockchain.`,
+        title: 'Secure & Private',
       },
     ]}
-    isReversed
     image={{
       src: swapExoticTokensImg,
       alt: 'swap exotic tokens',
       class: 'swap_exotic_token__image',
-    }}
-    classes={{
-      wrapperClass: '',
     }}
   >
     <Fragment slot="content">
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         Looking for Exotic Tokens?
       </h3>
+      You will find all tokens here & you can swap them directly from your wallet using our non-custodial On-Chain solution.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
   <Content
     items={[
       {
-        icon: null,
-        description: `We integrating cross-chain swaps solution to allow you to swap tokens between different blockchains 
-          without the need to manage multiple wallets or create accounts on multiple exchanges. 
-          All is done in one place, with the best rates and lowest fees.`,
+        title: `All in One place`,
+        description: `
+          Don't waste time to find the best route to swap your tokens between different blockchains.
+        `,
       },
-    ]}
+      {
+        title: `Use Decentralized provider`,
+        description: `
+          We use decentralized providers to swap tokens between different blockchains to ensure fast & secure transactions 
+          with the best rates & lowest fees.
+        `
+      },
+      {
+        title: `No need to create multiple accounts`,
+        description: `
+          You can swap tokens between different blockchains without the need to manage multiple wallets or create accounts on multiple exchanges.
+        `
+      }
+    ]} 
     image={{
       src: swapCrossPlatformImg,
       alt: 'Swap Cross Chain Tokens',
@@ -110,14 +159,20 @@ const swapBestFeesImg = '~/assets/images/swap-best-fees.png';
       <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
         Want swap Cross-Chain?
       </h3>
+        We integrating cross-chain swaps solution to allow you to swap tokens between different blockchains 
+        without the need to manage multiple wallets or create accounts on multiple exchanges. 
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
   <!-- CallToAction Widget *********** -->
 
-  <CallToAction id="download" title="Install Hexa Lite now!" subtitle="Start your journey to financial freedom today.">
+  <CallToAction id="download" title="Now Swap any Tokens you want!" subtitle="Start your journey to financial freedom today.">
     <div slot="actions" class="flex max-w-sm gap-4">
-      <Button variant="primary" href={appDownloadLink}> Download App </Button>
+      <Button variant="primary" href={appDownloadLink}> Download Hexa Lite </Button>
     </div>
   </CallToAction>
 
