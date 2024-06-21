@@ -7,9 +7,7 @@ category: Informations
 tags:
   - Information
   - tuto
-  - Guid
-metadata:
-  canonical: https://hexa-lite.io/articles/what-is-crypto-wallet
+  - Guide
 ---
 
 As the world of cryptocurrencies continues to grow and evolve, understanding how to securely store and manage your digital assets is crucial. A crypto wallet is a fundamental tool for anyone looking to invest in or use cryptocurrencies. This comprehensive guide will explain what a crypto wallet is, how it works, the different types available, and best practices for beginners. Additionally, we'll reference some of our previous articles to provide a well-rounded understanding of the topic.

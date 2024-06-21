@@ -2,7 +2,7 @@ site:
   name: Hexa Lite
   site: 'https://hexa-lite.io'
   base: '/'
-  trailingSlash: false
+  trailingSlash: true
 
   googleSiteVerificationId: null
 
