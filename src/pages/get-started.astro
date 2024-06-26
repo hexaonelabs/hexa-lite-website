@@ -4,6 +4,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Button from '~/components/ui/Button.astro';
+import BlogHighlightedPosts from '~/components/widgets/BlogHighlightedPosts.astro';
 
 const appPreview = '~/assets/images/preview-multi-platforms-app.png';
 const metadata = {
@@ -44,8 +45,8 @@ const metadata = {
     tagline='Get Started'
     title="What is Required to Create a Wallet?"
     subtitle=`
-      You <b>don't need</b> any Personal Information, ID Document or Proof of Residence to create a Wallet.<br/><br/>
-      Just Follow these Steps to Install the App on your Device & Start Investing in Crypto to Build you Financial Journey.
+      You <b>don't need</b> any personal information, ID Document or proof of residence to create a Wallet.<br/><br/>
+      Just follow these steps to install the App on your device & start investing in crypto to build you financial journey.
     `
     items={[
       {
@@ -77,13 +78,35 @@ const metadata = {
           You can also Stake some of your Assets or use the Lending Market to Earn Passive Income.
         `},
     ]}
+    callToAction={{
+      title: 'Install Hexa Lite now!',
+      text: 'Download Web App',
+      href: 'https://app.hexa-lite.io',
+      variant: 'primary',
+      target: '_blank',
+    }}
   />
 
-    <!-- CallToAction Widget *********** -->
+  <BlogHighlightedPosts 
+    title='Learn More about Crypto & DeFi Markets'
+    linkText={''}
+    information='Learn how to invest in crypto assets, how to manage your portfolio and how to earn passive income with DeFi.'
+    postIds={[
+      'what-is-crypto-asset.mdx',
+      'what-is-crypto-wallet.md',
+      'how-much-capital-is-needed-to-start-investing-in-crypto.md',
+      'how-to-invest-into-crypto.md',
+    ]} >
+      <Fragment slot="bg">
+        <div class="absolute inset-0 bg__shader"></div>
+      </Fragment>
+    </BlogHighlightedPosts>
 
-    <CallToAction id="download" title="Install Hexa Lite now!" subtitle="Start your journey to financial freedom today.">
-      <div slot="actions" class="flex max-w-sm gap-4">
-        <Button variant="primary" href="https://app.hexa-lite.io"> Download App </Button>
-      </div>
-    </CallToAction>
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction id="download" title="Install Hexa Lite now!" subtitle="Start your journey to financial freedom today.">
+    <div slot="actions" class="flex max-w-sm gap-4">
+      <Button variant="primary" href="https://app.hexa-lite.io"> Download App </Button>
+    </div>
+  </CallToAction>
 </Layout>
