@@ -1,0 +1,144 @@
+---
+import { Icon } from 'astro-icon/components';
+import Image from '~/components/common/Image.astro';
+import Button from '~/components/ui/Button.astro';
+import Headline from '~/components/ui/Headline.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink } from '~/utils/permalinks';
+import Features3 from '~/components/widgets/Features3.astro';
+import Content from '~/components/widgets/Content.astro';
+
+
+
+// created_at
+const metadata = {
+  title: 'Onboard to DeFi in minutes with Hexa Lite',
+  description: 'Hexa Lite software is starting by the main team of HexaOne Labs, a Swiss based organization focused on innovation in the decentralized finance sector.',
+};
+const appDownloadLink = getPermalink('/download');
+const swapAnyTokensImg = '~/assets/images/swap-any-tokens.png';
+
+const onBoardingImg = '~/assets/images/onboarding.png';
+const swapExoticTokensImg = '~/assets/images/swap-exotic-tokens.png';
+const swapBestFeesImg = '~/assets/images/swap-best-fees.png';
+---
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        text: 'Learn more',
+        href: '#tired-paying-excessive-transaction-fees',
+      },
+    ]}>
+    <Fragment slot="title">
+      Connect to your Wallet
+      <br /> 
+      <span class="text-accent text-5xl dark:text-white highlight">
+        & build your financial freedom
+      </span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Use your social login, email or external device to connect in minute to your wallet, allowing complete control & ownership of your digital assets.
+    </Fragment>
+  </Hero>
+
+  <Content
+    id="tired-paying-excessive-transaction-fees"
+    items={[
+      {
+        title: `Instant Account Creation`,
+        description: `
+        Within a minute, you can be up & running, ready to explore the full range of our financial services. 
+        Our platform is built to accommodate your needs swiftly, without any unnecessary steps.`,
+      },
+      {
+        title: `Multiple Login Options`,
+        description: `
+          We offer Multiple Login Options to cater to your unique needs. 
+          Whether you prefer the convenience of social login, the reliability of email, or the security of a digital wallet, we have you covered.
+        `
+      },
+      {
+        title: `Multi-chain Wallet`,
+        description: `
+          With you cross-chain compatible wallet, you can to manage your assets across multiple blockchains. 
+          This flexibility ensures that you can access a wide range of financial services from blockain like Bitcoin, Solana, Ethereum, Base, Polygon, Arbitum or any other EVM blockchain, all in one place.
+        `
+      }
+    ]}
+    image={{
+      src: onBoardingImg,
+      alt: 'Quick & Easy Onboarding',
+      class: 'fitContent m-auto ',
+    }}
+    classes={{
+      wrapperClass: 'shader__section',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Quick & Easy Onboarding
+      </h3>
+      Connect with simplicity and efficiency, our solution ensuring you can get started on your financial journey in minute 
+      with a streamlined process that designed to be user-friendly and accessible, no matter your preferred method of login.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
+    isReversed
+    items={[
+      {
+        description: `
+        Our onboarding process is designed to save you time. 
+        Whether you’re setting up a new account or connecting an existing one, HexaLite ensures that the process is as quick as possible.`,
+        title: `Efficiency`,
+      },
+      {
+        description: `We understand that not everyone is tech-savvy. 
+        That’s why our platform is intuitive and straightforward, guiding you every step of the way.`,
+        title: 'Simplicity',
+      },
+
+      {
+        description: `
+        Your security is our priority. 
+        HexaLite uses advanced encryption and secure verification methods to protect your personal information and financial data.`,
+        title: 'Security',
+      },
+    ]}
+    image={{
+      src: swapExoticTokensImg,
+      alt: 'swap exotic tokens',
+      class: 'swap_exotic_token__image filter-drop-shadow fitContent scale-125',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Why Choose HexaLite for Onboarding?
+      </h3>
+      
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction id="download" title="Create you digital Wallet now!" subtitle="Start your journey to financial freedom today.">
+    <div slot="actions" class="flex max-w-sm gap-4">
+      <Button variant="primary" href={appDownloadLink}> Download Hexa Lite </Button>
+    </div>
+  </CallToAction>
+
+</Layout>
