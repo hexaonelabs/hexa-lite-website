@@ -1,13 +1,9 @@
 ---
-import { Icon } from 'astro-icon/components';
-import Image from '~/components/common/Image.astro';
 import Button from '~/components/ui/Button.astro';
-import Headline from '~/components/ui/Headline.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getPermalink } from '~/utils/permalinks';
-import Features3 from '~/components/widgets/Features3.astro';
 import Content from '~/components/widgets/Content.astro';
 
 
@@ -18,11 +14,10 @@ const metadata = {
   description: 'Hexa Lite software is starting by the main team of HexaOne Labs, a Swiss based organization focused on innovation in the decentralized finance sector.',
 };
 const appDownloadLink = getPermalink('/download');
-const swapAnyTokensImg = '~/assets/images/swap-any-tokens.png';
 
 const onBoardingImg = '~/assets/images/onboarding.png';
-const swapExoticTokensImg = '~/assets/images/swap-exotic-tokens.png';
-const swapBestFeesImg = '~/assets/images/swap-best-fees.png';
+const onboardSecurityImg = '~/assets/images/onboarding-security.png';
+const onboardBackupImg = '~/assets/images/onboarding-backup.png';
 ---
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
@@ -93,8 +88,50 @@ const swapBestFeesImg = '~/assets/images/swap-best-fees.png';
     </Fragment>
   </Content>
 
+
   <Content
     isReversed
+    items={[
+      {
+        description: `
+        You are the only custodian of your assets. This autonomy ensures that you have the ultimate say in how your assets are handled. 
+        Whether it's making transactions, accessing funds, or managing your portfolio, every action is under your direct control.`,
+        title: `Total Control Over Your Assets`,
+      },
+      {
+        description: `Eliminate the risk associated with third-party custodians. 
+        Your assets are secured with advanced encryption and stored directly in your device. 
+        This setup minimizes the risk of external breaches and ensures that your financial privacy is preserved.`,
+        title: 'Enhanced Security & Privacy',
+      },
+
+      {
+        description: `
+        Unlike traditional custodial services where a third party might have control, HexaLite’s approach guarantees that your funds are safe from unauthorized access. 
+        Only you can authorize transactions and access your assets.`,
+        title: 'No Interference or Unauthorized Access',
+      },
+    ]}
+    image={{
+      src: onboardBackupImg,
+      alt: 'onboard with secure solution',
+      class: 'fitContent m-auto',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Self-Custodial: Your Assets, Your Control
+      </h3>
+      Your Wallet is designed to ensure that you maintain total ownership & authority over your holdings. 
+      This means that no one—not even HexaLite can move, access, or manage your assets without your explicit permission.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Content
     items={[
       {
         description: `
@@ -116,9 +153,12 @@ const swapBestFeesImg = '~/assets/images/swap-best-fees.png';
       },
     ]}
     image={{
-      src: swapExoticTokensImg,
-      alt: 'swap exotic tokens',
-      class: 'swap_exotic_token__image filter-drop-shadow fitContent scale-125',
+      src: onboardSecurityImg,
+      alt: 'onboard with secure solution',
+      class: 'fitContent m-auto',
+    }}
+    classes={{
+      wrapperClass: 'shader__section',
     }}
   >
     <Fragment slot="content">
