@@ -1,0 +1,133 @@
+---
+import Button from '~/components/ui/Button.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink } from '~/utils/permalinks';
+import Content from '~/components/widgets/Content.astro';
+
+
+
+// created_at
+const metadata = {
+  title: 'Buy Crypto with Fiat, The Ultimate Platform for Seamless Transactions',
+  description: 'Buy crypto with fiat on multiple chains effortlessly, enjoy the best prices, no ID required. Exchange cryptos across networks and cash out to your bank in +150 countries',
+};
+const appDownloadLink = getPermalink('/download');
+
+const buyCryptoImg = '~/assets/images/buy-crypto.png';
+const buyCryptoPayementImg = '~/assets/images/buy-crypto-payement.png';
+---
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        text: 'Learn more',
+        href: '#seamless-crypto-purchases',
+      },
+    ]}>
+    <Fragment slot="title">
+      Buy Crypto with Fiat
+      <br /> 
+      <span class="text-accent text-5xl dark:text-white highlight">
+        The Ultimate Platform for Seamless Transactions
+      </span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Buy crypto with fiat on multiple chains effortlessly, enjoy the best prices, no ID required. 
+      Exchange cryptos across networks and cash out to your bank in +150 countries
+    </Fragment>
+  </Hero>
+
+  <Content
+    id="seamless-crypto-purchases"
+    items={[
+      {
+        title: `Effortless Transactions`,
+        description: `
+        With user-friendly interface, purchasing crypto has never been easier. Just a few clicks, and you're set!`,
+      },
+      {
+        title: `Best Prices Guaranteed`,
+        description: `
+        We scan multiple providers to ensure you get the best possible prices for your transactions.
+        `
+      },
+      {
+        title: `No Identification Required (no KYC)`,
+        description: `Privacy is our priority. You can buy and exchange crypto without submitting any personal identification under certain thresholds.
+        `
+      }
+    ]}
+    image={{
+      src: buyCryptoImg,
+      alt: 'Buy Crypto with Fiat',
+      class: 'fitContent m-auto ',
+    }}
+    classes={{
+      wrapperClass: 'shader__section',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Fast & No KYC required
+      </h3>
+        We working with an affiliated Swiss financial intermediary with compliance framework allows for KYC-less money exchange transactions under certain thresholds.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+
+  <Content
+    isReversed
+    items={[
+      {
+        description: `
+        Bank transfers are a secure and dependable method to fund your crypto purchases. This traditional payment option provides a straightforward way to move funds directly from your bank account to our platform.`,
+        title: `Bank Transfers`,
+      },
+      {
+        description: `Using your Visa or Mastercard, you can quickly and easily purchase cryptocurrencies on our platform. This method is perfect for those who prefer the speed and convenience of card payments.`,
+        title: 'Credit and Debit Cards',
+      },
+
+      {
+        description: `
+        For those who favor digital payment solutions, we support Google Pay and Apple Pay. These options provide a fast, secure, and convenient way to buy crypto without the need for physical cards or bank details.`,
+        title: 'Digital Wallets',
+      },
+    ]}
+    image={{
+      src: buyCryptoPayementImg,
+      alt: 'payememnt methods for crypto transact',
+      class: 'fitContent m-auto',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Flexible Payment Methods for Your Convenience
+      </h3>
+      To ensure a seamless and versatile buying experience, we offer a variety of payment methods to suit your preferences. Whether you prefer traditional banking or modern digital payment solutions, we've got you covered.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction id="download" title="Buy Crypto now!" subtitle="Start your journey to financial freedom today.">
+    <div slot="actions" class="flex max-w-sm gap-4">
+      <Button variant="primary" href={appDownloadLink}> Download Hexa Lite </Button>
+    </div>
+  </CallToAction>
+
+</Layout>

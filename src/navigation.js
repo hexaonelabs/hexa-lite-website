@@ -21,10 +21,10 @@ export const headerData = {
           text: 'Increase Income with Liquid Staking',
           href: getPermalink('/#increase-income-with-liquid-staking'),
         },
-        // {
-        //   text: 'Buy Crypto with Fiat',
-        //   href: getPermalink('/#buy-crypto-with-fiat'),
-        // },
+        {
+          text: 'Buy Crypto with no ID required',
+          href: getPermalink('/#buy-crypto-with-fiat'),
+        },
         {
           text: 'Open Source and Non-Custodial',
           href: getPermalink('/#open-source-and-non-custodial'),
@@ -63,7 +63,7 @@ export const footerData = {
         { text: 'Swap tokens', href: getPermalink('/#swap-between-1000-tokens') },
         { text: 'DeFi Loan Markets', href: getPermalink('/#defi-loan-markets') },
         { text: 'Liquid Staking', href: getPermalink('/#increase-income-with-liquid-staking')},
-        // { text: 'Fiat onRamp', href: getPermalink('/#fiat-onramp') },
+        { text: 'Buy Crypto', href: getPermalink('/#buy-crypto-with-fiat') },
       ],
     },
     {

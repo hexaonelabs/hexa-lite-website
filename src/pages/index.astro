@@ -20,7 +20,7 @@ const onBoardingImg = '~/assets/images/onboarding.png';
 const defiImg = '~/assets/images/coins-b.png';
 const swapImg = '~/assets/images/swap.svg';
 const liquidStakingImg = '~/assets/images/Liquid-Staking.svg';
-const buyWithFiatImg = '~/assets/images/fiat-crypto.png';
+const buyWithFiatImg = '~/assets/images/buy-crypto.png';
 
 const metadata = {
   title: 'Hexa Lite - Build your Wealth with Crypto Assets',
@@ -92,7 +92,7 @@ const metadata = {
   <Features3
     id="onboard-on-defi"
     title=`Onboard on <span class="text-accent">DeFi</span>`
-    subtitle="Take full controls of your digitals assets"
+    subtitle="Never miss an opportunity to grow your wealth. Hexa Lite provides a seamless onboarding experience to the world of decentralized finance, allowing you to access a wide range of financial services and opportunities."
     classes={{
       container: 'mt-[100px] lg:pb-[0px]',
       wrapperClass: 'shader__section',
@@ -231,14 +231,15 @@ const metadata = {
     </Fragment>
   </Content>
 
-  <!-- <Content
+  <Content
     id="buy-crypto-with-fiat"
     items={[
       {
         description: `
-          Use a simple and secure way to buy digital assets with fiat money. 
-          Our platform offers a wide range of payment methods to ensure a seamless experience. 
-          Get started with a few clicks and start investing in the future of finance.
+          Buy crypto with fiat in just a few clicks. 
+          Whether you're new to the world of digital currencies or a seasoned trader, 
+          we provide the best prices and a hassle-free experience, 
+          <b>all without the need for identification</b>.
         `,
         icon: null,
       },
@@ -246,26 +247,26 @@ const metadata = {
     image={{
       src: buyWithFiatImg, //'https://images.unsplash.com/photo-1576153192621-7a3be10b356e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80',
       alt: 'Buy Crypto with Fiat image',
-      class: 'buy_with_fiat__image m-auto',
+      class: 'fitContent m-auto',
     }}
     classes={{
       wrapperClass: 'shader__section',
     }}
     callToAction={{
-      text: 'Buy Crypto with Fiat Money',
-      href: appLaunchLink,
-      target: '_blank',
+      text: 'Buy Crypto with Fiat',
+      href: getPermalink('/buy-crypto'),
     }}
   >
     <Fragment slot="content">
       <h3 class="underlinedColor text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Buy Crypto with Fiat Money
+        Buy Crypto with No ID required
       </h3>
     </Fragment>
-  </Content> -->
+  </Content>
 
   <Content
     id="open-source-and-non-custodial"
+    isReversed
     items={[
       {
         description: `
