@@ -1,0 +1,259 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Header from '~/components/widgets/Header.astro';
+import { getPermalink } from '~/utils/permalinks';
+import Content from '~/components/widgets/Content.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+
+const previewImg = '~/assets/images/preview-app.png';
+const swapBestFeesImg = '~/assets/images/start-investing-crypto-swap.png';
+const earningPoolImg = '~/assets/images/start-investing-crypto-earn.png';
+const privacyImg = '~/assets/images/start-investing-crypto-privacy.png';
+
+const metadata = {
+  title: 'Lead Generation Landing Page Demo',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero2 Widget ******************* -->
+
+  <Fragment slot="header">
+    <slot name="header">
+      <Header
+        links={undefined}
+        actions={[
+          {
+            text: 'Get Started',
+            href: getPermalink('/get-started')
+          },
+        ]}
+        showToggleTheme
+        position="right"
+      />
+    </slot>
+  </Fragment>
+
+  <Hero
+    tagline="Never miss an opportunity again"
+    title="Start with Crypto Investing"
+    subtitle=`Experience the future of finance with Hexa Lite, your ultimate tool for crypto investing and earning. 
+    Join thousands of satisfied users and start your journey in decentralized finance!`
+    actions={[
+      { variant: 'primary', text: 'Inversting Now', href: getPermalink('/get-started')},
+      { text: 'Learn more', href: '#simple-flexible-performance' },
+    ]}
+    image={{
+      src: previewImg,
+      alt: 'Start investing now',
+      class: ' object-contain m-auto filter-drop-shadow',
+    }}
+  />
+
+  <Content
+    id="simple-flexible-performance"
+    items={[
+      {
+        title: `Swap any tokens between different blockchains effortlessly`,
+        description: `
+        Access across 20+ EVM-compatible blockchains, Bitcoin, and Solana
+        & enjoy the freedom to trade any tokens across various networks seamlessly. 
+        `,
+      },
+      {
+        title: `No minimum or maximum limits for swapping`,
+        description: `
+        With on-chain liquidity pools, you can swap any amount of tokens without any constraints or limitations.
+        `
+      },
+      {
+        title: `Always get the best rates & lowest fees`,
+        description: `
+        Maximize your profits with optimized rates & minimal costs for your transactions by 
+        sourcing liquidity from various DEXs & liquidity pools around DeFi protocols.
+        
+        `
+      }
+    ]}
+    image={{
+      src: swapBestFeesImg,
+      alt: '',
+      class: 'filter-drop-shadow fitContent m-auto ',
+    }}
+    callToAction={
+      {
+        variant: 'primary',
+        text: 'Start with Crypto Investing',
+        href: getPermalink('/get-started'),
+        class: 'block md:inline sm:w-full md:w-auto'
+      }
+    }
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Simplicity, Flexibility & Performance
+      </h3>
+      Invest and Swap any tokens between different blockchains without the need to manage multiple wallets or create accounts on multiple exchanges.
+    </Fragment>
+
+    <!-- <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment> -->
+  </Content>
+
+  <Content
+    isReversed
+    items={[
+      {
+        description: `
+        Explore new opportunities in DeFi protocols with Liquidity Pools, Liquid Staking and Yield Farming.
+        `,
+        title: `
+        Diversify your investments & grow your wealth.
+        `,
+      },
+      {
+        description: `
+        Deposit your liquidity into DeFi protocols that offer high returns on your digital assets 
+        while keeping your funds accessible at all times.
+        `,
+        title: 'Earn substantial interest on your crypto',
+      },
+
+      {
+        description: `
+          Use loan protocols without restrictions to borrow against your assets to leverage your investments and grow your portfolio faster.
+        `,
+        title: 'Build strategies for long-term growth',
+      },
+    ]}
+    image={{
+      src: earningPoolImg,
+      alt: 'maximize your earnings',
+      class: 'filter-drop-shadow fitContent m-auto mt-10',
+    }}
+    callToAction={
+      {
+        variant: 'primary',
+        text: 'Maximize Your Earnings',
+        href: getPermalink('/get-started'),
+        class: 'block md:inline sm:w-full md:w-auto'
+      }
+    }
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Maximize Your Earnings
+      </h3>
+      Diversify your investments & grow your wealth by depositing your liquidity into DeFi protocols that 
+      offer high returns on your digital assets while keeping your funds accessible at all times.
+    </Fragment>
+  </Content>
+
+  <Content
+    id="security-privacy"
+    items={[
+      {
+        title: `No ID verification or KYC required`,
+        description: `
+        Enjoy the freedom to trade any tokens without the need to provide your personal information or go through any verification process.
+        `,
+      },
+      {
+        title: `Your Cypto, Your Control`,
+        description: `
+        Our solution is fully non-custodial and allows you to manage your tokens directly from your wallet on the blockchain. 
+        This means you are always in control of your funds. You are the only one who can access them.
+        `,
+      },
+      {
+        title: `No restrictions or censorship`,
+        description: `
+        We believe in the freedom of money. 
+        With Hexa Lite you can access a various range of decentralized financial services without any restrictions or censorship.
+        `}
+    ]}
+    image={{
+      src: privacyImg,
+      alt: 'security & privacy',
+      class: 'filter-drop-shadow fitContent m-auto md:mt-[8rem] md:scale-125',
+    }}
+    callToAction={
+      {
+        variant: 'primary',
+        text: 'Create secure Wallet',
+        href: getPermalink('/get-started'),
+        class: 'block md:inline sm:w-full md:w-auto'
+      }
+    }
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Security & Privacy
+      </h3>
+      Your privacy and security are our top priority. 
+      We use decentralized protocols to ensure that your transactions are secure and private.
+    </Fragment>
+
+    <!-- <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment> -->
+  </Content>
+
+  <Testimonials
+    title="What our users say?"
+    testimonials={[
+      {
+        testimonial: `
+          Investing in crypto has never been easier. Hexa Lite is the perfect tool for beginners that want to start investing in digital assets with ease.
+        `,
+        name: 'Sara B',
+        image: {
+          src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Sara B Image',
+        },
+      },
+      {
+        testimonial: `I love how I can manage multiple tokens accross various network with only one wallet with simple interface. Hexa Lite truly delivers.`,
+        name: 'Josh W',
+        image: {
+          src: 'https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Josh W Image',
+        },
+      },
+      {
+        testimonial: `
+        Hexa Lite allows me to earn passive income on my crypto assets by providing liquidity to various DeFi protocols withou any hassle and while keeping my funds secure. I love it!`,
+        name: 'Sidney H',
+        image: {
+          src: 'https://images.unsplash.com/photo-1512361436605-a484bdb34b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
+          alt: 'Sidney H Image',
+        },
+      },
+    ]}
+    classes={{
+      container: 'shader__section',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 shader__section dark:bg-transparent"></div>
+    </Fragment>
+  </Testimonials> 
+
+  <CallToAction
+    title="Get Started with Hexa Lite"
+    subtitle="Create a Wallet & start investing in crypto assets in just a few minutes"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start investing now',
+        href: getPermalink('/get-started'),
+      },
+    ]}
+  />
+
+</Layout>
