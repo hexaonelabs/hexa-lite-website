@@ -44,7 +44,7 @@ const {
   />
   <div class="mx-auto max-w-7xl p-4 md:px-8">
     <div class={`md:flex ${isReversed ? 'md:flex-row-reverse' : ''} md:gap-16`}>
-      <div class="md:basis-1/2 self-center">
+      <div class={`md:basis-1/${image ? '2' : '1 w-full'} self-center`}>
         {content && <div class="mb-8 text-lg dark:text-slate-400" set:html={content} />}
 
         <ItemGrid
@@ -69,9 +69,9 @@ const {
           )
         }
       </div>
-      <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
-        {
-          image && (
+      {
+        image && (
+          <div aria-hidden="true" class="mt-10 md:mt-0 md:basis-1/2">
             <div class="relative m-auto max-w-4xl">
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
@@ -87,9 +87,9 @@ const {
                 />
               )}
             </div>
+          </div>
           )
         }
-      </div>
     </div>
   </div>
 </WidgetWrapper>
