@@ -13,13 +13,16 @@ import ItemGrid from '~/components/ui/ItemGrid.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Stats from '~/components/widgets/Stats.astro';
+import Footer from '~/components/widgets/Footer.astro';
+import { footerData } from '~/navigation';
 
-const previewImg = '~/assets/images/preview-app.png';
+const previewImg = '~/assets/images/symbols.png';
+const swapImg = '~/assets/images/swap.svg';
 const guide001Img = '~/assets/images/guide-start-crypto-invesment.png';
 const privacyImg = '~/assets/images/start-investing-crypto-privacy.png';
 
 const metadata = {
-  title: `Don't Miss the Cryptocurrency opportunity: Discover Bitcoin, Stablecoins, and the DeFi Revolution.`,
+  title: `Understand Cryptocurrencies. Access to Our Exclusive Guide for Free & Master Cryptocurrencies Today.`,
   description: `
   Don't miss the opportunity of the century with cryptocurrencies! 
   Learn all about Bitcoin, stablecoins, and decentralized finance (DeFi). 
@@ -42,9 +45,9 @@ const metadata = {
 
   <Hero
     tagline="Bitcoin, Ethereum, & more"
-    title="Master Cryptocurrencies"
+    title="Understand Crypto Assets"
     subtitle=`
-    Access to Our Exclusive Guide for Free & Master Cryptocurrencies Starting Today
+    Access to Our Exclusive Guide for Free & Master Cryptocurrencies Today
     `
     actions={[
       { variant: 'primary', text: 'Learn Now', href: '#why-learn-cryptocurrencies' },
@@ -52,34 +55,55 @@ const metadata = {
     image={{
       src: previewImg,
       alt: 'Start learn now',
-      class: ' object-contain m-auto filter-drop-shadow',
+      class: ' object-contain m-auto filter-drop-shadow !max-w-[1024px] ',  
     }}
   />
 
   <Features
+    id="why-learn-cryptocurrencies"
     title="Why Learn Cryptocurrencies?"
     subtitle="Cryptocurrencies are the future of financial transactions & investments. Discover the benefits of our exclusive guide to master cryptocurrencies."
     items={[
       {
-        title: 'Understand the Basics',
-        description: 'Learn the history & fundamental concepts.',
-        icon: 'tabler:list-check',
+        title: 'Embrace the Future of Finance',
+        description: 'Discover why using crypto is a smart move today!',
+        icon: 'tabler:bulb',
       },
       {
-        title: 'Secure Your Investments',
-        description: 'Discover how to protect your assets.',
+        title: 'Unlock Opportunities',
+        description: 'Discover the potential of cryptocurrencies.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Secure Your Financial Future',
+        description: 'Learn how to protect your investments.',
         icon: 'tabler:lock',
       },
       {
-        title: 'Manage Volatility',
-        description: 'Learn strategies to navigate unstable markets.',
-        icon: 'tabler:chart-line',
-      },
-      {
-        title: 'Explore Blockchain',
-        description: `Understand the technology that powers cryptocurrencies.`,
-        icon: 'tabler:lock',
-      },
+        title: `Don't Get Left Behind`,
+        description: 'Understand the technology that powers the future.',
+        icon: 'tabler:bolt',
+      }
+      // {
+      //   title: 'Understand the Basics',
+      //   description: 'Learn the history & fundamental concepts.',
+      //   icon: 'tabler:list-check',
+      // },
+      // {
+      //   title: 'Secure Your Investments',
+      //   description: 'Discover how to protect your assets.',
+      //   icon: 'tabler:lock',
+      // },
+      // {
+      //   title: 'Manage Volatility',
+      //   description: 'Learn strategies to navigate unstable markets.',
+      //   icon: 'tabler:chart-line',
+      // },
+      // {
+      //   title: 'Explore Blockchain',
+      //   description: `Understand the technology that powers cryptocurrencies.`,
+      //   icon: 'tabler:lock',
+      // },
     ]}
   />
 
@@ -89,15 +113,15 @@ const metadata = {
     title=`What You'll Discover`
     subtitle="Our guide covers everything you need to know about cryptocurrencies, from the basics to advanced concepts."
     items={[
-      { title: 'Introduction to Cryptocurrencies', description: 'History and key concepts.' },
-      { title: 'How Cryptocurrencies Work', description: 'Mechanisms and importance.' },
-      { title: 'Security and Volatility', description: 'Tools to secure and manage your investments.' },
-      { title: 'Blockchain Technology', description: `Understanding the technological foundation.` }
+      { title: 'Introduction to Cryptocurrencies', description: 'History and key concepts.', classes: { icon: 'bg-blue-500 dark:bg-blue-500' } },
+      { title: 'How Cryptocurrencies Work', description: 'Mechanisms and importance.', classes: { icon: 'bg-blue-500 dark:bg-blue-500' } },
+      { title: 'Security and Volatility', description: 'Tools to secure and manage your investments.', classes: { icon: 'bg-blue-500 dark:bg-blue-500' } },
+      { title: 'Blockchain Technology', description: `Understanding the technological foundation.`, classes: { icon: 'bg-blue-500 dark:bg-blue-500' } }
     ]}
     image={{
-      src: privacyImg,
-      alt: 'security & privacy',
-      class: 'filter-drop-shadow fitContent m-auto md:mt-[8rem] md:scale-125',
+      src: swapImg,
+      alt: 'discover Crypto image',
+      class: '',
     }}
   >
  
@@ -155,8 +179,9 @@ const metadata = {
 
   <Features2
     title="About us"
-    subtitle=`We are recognized experts in technology & finance, dedicated to cryptocurrency education & developpment. 
-    Our resources are designed to be accessible and understandable, regardless of your knowledge level.``
+    subtitle=`This Cryptocurrency Guide is write by HexaOne Labs.<br/>
+    We're a passionate team of blockchain innovators based in Switzerland, dedicated to advancing decentralized technology. Our mission is to make the world of cryptocurrencies & decentralized finance accessible to everyone, regardless of their experience level.<br/><br/>
+    Our resources are designed to be accessible and understandable, regardless of your knowledge level.`
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 shader__section dark:bg-transparent"></div>
@@ -168,10 +193,9 @@ const metadata = {
     title="Discover the impressive impact of our Guide"
     subtitle="The numbers below reflect the trust our users have placed in us and the remarkable outcomes we've helped them achieve."
     stats={[
-      { title: 'Downloads', amount: '182K' },
-      { title: 'Websites Launched', amount: '87' },
+      { title: 'Guide downloads', amount: '186K' },
+      { title: `Increase Knowledge`, amount: '92%' },
       { title: 'User Ratings', amount: '4.8' },
-      { title: 'Satisfied Clients', amount: '116K' },
     ]}
   />
 
@@ -186,4 +210,25 @@ const metadata = {
       },
     ]}
   />
+
+  <Fragment slot="footer">
+    <slot name="footer">
+      <div
+        class="dark text-muted text-sm bg-black dark:border-b dark:border-slate-800 dark:text-slate-400 hidden md:flex gap-1 overflow-hidden px-3 py-2 relative text-ellipsis whitespace-nowrap"
+      >
+        Provided by 
+        <a href="https://hexa-lite.io" class="text-muted hover:underline dark:text-slate-400 font-medium"
+          >HexaLite</a
+        > from 
+        <a
+          target="_blank"
+          rel="noopener"
+          href="https://hexaoneloabs.com"
+          class="text-muted hover:underline dark:text-slate-400 font-medium"
+        >HexaOne Labs
+        </a> 
+        core team.
+      </div>
+    </slot>
+  </Fragment>
 </Layout>
