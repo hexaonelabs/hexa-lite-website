@@ -13,6 +13,7 @@ import Stats from '~/components/widgets/Stats.astro';
 
 const previewImg = '~/assets/images/symbols.png';
 const swapImg = '~/assets/images/swap.svg';
+const descover2Img = '~/assets/images/start-investing-crypto-earn.png';
 
 const metadata = {
   title: `Understand Cryptocurrencies. Access to Our Exclusive Guide for Free & Master Cryptocurrencies Today.`,
@@ -55,27 +56,37 @@ const metadata = {
   <Features
     id="why-learn-cryptocurrencies"
     title="Why Learn Cryptocurrencies?"
-    subtitle="Cryptocurrencies are the future of financial transactions & investments. Discover the benefits of our exclusive guide to master cryptocurrencies."
+    subtitle="Cryptocurrencies are the future of financial transactions & investments. Discover why you should learn about them today and how they can benefit you."
     items={[
       {
-        title: 'Embrace the Future of Finance',
-        description: 'Discover why using crypto is a smart move today!',
+        title: 'Portfolio Diversification',
+        description: 'Cryptocurrencies can help diversify an investment portfolio while providing high returns.',
         icon: 'tabler:bulb',
       },
       {
         title: 'Unlock Opportunities',
-        description: 'Discover the potential of cryptocurrencies.',
+        description: `Digitals assets like cryptocurrencies offer unique investment opportunities that can't be found elsewhere.`,
         icon: 'tabler:rocket',
       },
       {
         title: 'Secure Your Financial Future',
-        description: 'Learn how to protect your investments.',
+        description: `Cryptocurrencies can protect your wealth from inflation and economic instability.`,
         icon: 'tabler:lock',
       },
       {
         title: `Don't Get Left Behind`,
-        description: 'Understand the technology that powers the future.',
+        description: `Investing in cryptocurrencies supports the development of blockchain technology, which has the potential to revolutionize various industries`,
         icon: 'tabler:bolt',
+      },
+      {
+        title: `24/7 Market Access`,
+        description: `Unlike traditional stock markets, cryptocurrency markets are open 24 hours a day, 7 days a week, allowing you to trade at any time that suits you.`,
+        icon: 'tabler:clock',
+      },
+      {
+        title: `Decentralized & Censorship-Resistant`,
+        description: 'You can use cryptocurrencies anywhere in the world without restrictions.',
+        icon: 'tabler:shield-check',
       }
       // {
       //   title: 'Understand the Basics',
@@ -108,8 +119,13 @@ const metadata = {
     items={[
       { title: 'Introduction to Cryptocurrencies', description: 'History and key concepts.', classes: { icon: 'bg-blue-500 dark:bg-blue-500' } },
       { title: 'How Cryptocurrencies Work', description: 'Mechanisms and importance.', classes: { icon: 'bg-blue-500 dark:bg-blue-500' } },
-      { title: 'Security and Volatility', description: 'Tools to secure and manage your investments.', classes: { icon: 'bg-blue-500 dark:bg-blue-500' } },
-      { title: 'Blockchain Technology', description: `Understanding the technological foundation.`, classes: { icon: 'bg-blue-500 dark:bg-blue-500' } }
+      { title: 'Blockchain Technology', description: `Understanding the technological foundation.`, classes: { icon: 'bg-blue-500 dark:bg-blue-500' } },
+      { 
+        title: `
+          Current legal & regulatory environment
+        `, 
+        description: `Understand the current legal and regulatory environment.`, 
+        classes: { icon: 'bg-blue-500 dark:bg-blue-500' } },
     ]}
     image={{
       src: swapImg,
@@ -123,6 +139,46 @@ const metadata = {
     </Fragment>
   </Content>
   
+  <Content
+    items={[
+      { 
+        title: `Solutions for gaining exposure to crypto`, 
+        description: `
+          What regulated and secure ways are currently available to gain exposure to cryptocurrencies.
+        `, 
+        classes: { icon: 'bg-blue-500 dark:bg-blue-500' } },       
+      { 
+        title: 'Security & Volatility Management', 
+        description: 'What tools are available to secure and manage crypto investments and navigate volatile markets.', 
+        classes: { icon: 'bg-blue-500 dark:bg-blue-500' } },
+      {
+        title: `
+          Decentralized Finance (DeFi) & Stablecoins
+        `,
+        description: `
+          How DeFi and stablecoins are used in the crypto ecosystem and their benefits.
+        `,
+        classes: { icon: 'bg-blue-500 dark:bg-blue-500' }
+      }
+
+    ]}
+    image={{
+      src: descover2Img,
+      alt: 'discover Crypto image',
+      class: `object-contain m-auto filter-drop-shadow !max-w-[1024px]`,
+    }}
+  >
+ 
+    <Fragment slot="content">
+      <h3 class=" text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        You will also learn about:
+      </h3>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 shader__section dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
   <Testimonials
     title="What our users say?"
     testimonials={[
@@ -217,7 +273,7 @@ const metadata = {
         <a
           target="_blank"
           rel="noopener"
-          href="https://hexaoneloabs.com"
+          href="https://hexaonelabs.com"
           class="text-muted hover:underline dark:text-slate-400 font-medium"
         >HexaOne Labs
         </a> 
