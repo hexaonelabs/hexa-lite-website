@@ -12,6 +12,9 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import type { MetaData } from '~/types';
 import FAQs from '~/components/widgets/FAQs.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import Button from '~/components/ui/Button.astro';
+import Headline from '~/components/ui/Headline.astro';
 
 const previewImg = '~/assets/images/symbols.png';
 const swapImg = '~/assets/images/swap.svg';
@@ -109,6 +112,19 @@ const metadata: MetaData = {
       //   description: `Understand the technology that powers cryptocurrencies.`,
       //   icon: 'tabler:lock',
       // },
+    ]}
+  />
+
+  <CallToAction
+    classes={{
+      container: 'xxx !pt-0',
+    }}
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Get my Guide Now',
+        href: getPermalink('#get-my-guide-now'),
+      },
     ]}
   />
 
@@ -217,12 +233,14 @@ const metadata: MetaData = {
 
   <CallToAction
     title="Get Your Exclusive Guide Now"
-    subtitle="Fill out the form below and instantly receive your free guide!"
+    subtitle=`
+      Download our free guide & start mastering cryptocurrencies today.
+    `
     actions={[
       {
         variant: 'primary',
         text: 'Get my Guide Now',
-        href: getPermalink('/get-started'),
+        href: getPermalink('#get-my-guide-now'),
       },
     ]}
   />
@@ -272,20 +290,55 @@ const metadata: MetaData = {
       ]}
    /> -->
 
-  <CallToAction
-    title="Get Your Exclusive Guide Now"
-    subtitle="Fill out the form below and instantly receive your free guide!"
-    classes={{
-      container: '!pb-[30vh]',
-    }}
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get my Guide Now',
-        href: getPermalink('/get-started'),
-      },
-    ]}
-  />
+  <WidgetWrapper id={'get-my-guide-now'} isDark={false} containerClass={`max-w-6xl mx-auto !pt-[30vh] !pb-[15vh]`}>
+    <div class="max-w-3xl mx-auto text-center p-6 rounded dark:border dark:border-slate-600">
+      
+      <Headline
+        title={'Get Your Exclusive Guide Now'}
+        subtitle={'Fill out the form below and instantly receive your free guide!'}
+        classes={{
+          container: 'mb-0 md:mb-0',
+          title: 'text-4xl md:text-4xl font-bold leading-tighter tracking-tighter mb-4 font-heading',
+          subtitle: 'text-xl text-muted dark:text-slate-400',
+        }}
+      />
+
+      <form method="post" action="https://newsletter.infomaniak.com/v3/api/1/newsletters/webforms/17775/submit" class="inf-form mt-6">
+        <input type="email" name="email" style="display:none" />
+        <input type="hidden" name="key" value="eyJpdiI6IkN0bFZkcWxDb1VMb2VETkpKTjFPRFZQbjZzZ1NXVUR6N1Q4bVZTSUhmMFk9IiwibWFjIjoiZDg2YzNlY2E0ZWZiYTE2OGVjNGQxZDM0ZDQxYTE1ODkwN2M5YzY0OTk4YzJmNmJjMjViZDAxYTg0YTRlMTg1ZiIsInZhbHVlIjoiXC9YekZOejVrREZXUTR6RW54TUxLN3ljMjFCcnQ5cTZnaEF1U2hLZEw5elE9In0=">
+        <input type="hidden" name="webform_id" value="17775">
+        <div class="inf-main_8844778f691c8c52cd208ba06e9886ae"> 
+          <div class="inf-content m-auto max-w-[400px]"> 
+            <div class="inf-input inf-input-text"> 
+              <input 
+                type="email" 
+                name="inf[1]" 
+                data-inf-meta="1" 
+                data-inf-error="" 
+                required="required" 
+                placeholder="Email *"
+                class="transition outline-none py-4 px-5 border rounded-lg focus:border-dark-slate-grey w-full" / > 
+            </div> 
+            <div class="inf-rgpd"></div> 
+            <div style=""> 
+              <label data-mcaptcha_url="https://captcha.infomaniak.com/widget/?sitekey=wKJaAigS1e48fWgqtjvg5w7rKA6QIwmy" for="mcaptcha__token" id="mcaptcha__token-label"> 
+                <input type="text" name="mcaptcha__token" id="mcaptcha__token"/> 
+              </label> 
+              <div id="mcaptcha__widget-container"></div> 
+              <script src="https://unpkg.com/@mcaptcha/vanilla-glue@0.1.0-rc2/dist/index.js"></script>
+            </div> 
+            <Button 
+              id="btn-success" 
+              text="Get my Guide Now" 
+              type='submit' 
+              variant='primary'
+              class="mt-6 w-full  " />
+          </div> 
+        </div> 
+      </form>
+
+    </div>
+  </WidgetWrapper>
 
   <Fragment slot="footer">
     <slot name="footer">
@@ -308,3 +361,4 @@ const metadata: MetaData = {
     </slot>
   </Fragment>
 </Layout>
+
