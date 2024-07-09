@@ -11,6 +11,7 @@ import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import type { MetaData } from '~/types';
+import FAQs from '~/components/widgets/FAQs.astro';
 
 const previewImg = '~/assets/images/symbols.png';
 const swapImg = '~/assets/images/swap.svg';
@@ -249,9 +250,34 @@ const metadata: MetaData = {
     ]}
   />
 
+  <!-- <FAQs
+      title='Frequently Asked Questions'
+      subtitle='Here are some common questions about the guide.'
+      items={[
+        {
+          title: `How can I access the guide?`,
+          description: `
+          Simply fill out the request form with your email, 
+          and you'll receive an email back with a link to download the guide.`,
+        },
+        {
+          title: `
+          How long does it take to read the guide?
+          `,
+          description: `
+          The guide is designed to be read in one sitting,
+          but you can also read it in sections if you prefer.
+          `
+        }
+      ]}
+   /> -->
+
   <CallToAction
     title="Get Your Exclusive Guide Now"
     subtitle="Fill out the form below and instantly receive your free guide!"
+    classes={{
+      container: '!pb-[30vh]',
+    }}
     actions={[
       {
         variant: 'primary',
