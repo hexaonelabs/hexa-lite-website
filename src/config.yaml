@@ -66,7 +66,8 @@ apps:
 analytics:
   vendors:
     googleAnalytics:
-      id: 'G-70XCWQ9YE2' # or "G-XXXXXXXXXX"
+      id: 'G-5VSWCV4CB7' # or "G-XXXXXXXXXX"
+      partytown: false
 
 ui:
   theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
